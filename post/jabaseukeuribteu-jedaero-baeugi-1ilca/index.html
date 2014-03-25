@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>자바스크립트 제대로 배우기 1일차 |  Luis' Webscience</title>
+    <meta name="description" content="Web, JavaScript에 관한 이야기">
+    <meta name="author" content="Luis Park">
+    <meta name="keywords" content="" />
+    <meta name="generator" content="haroopress v0.9.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/rss.xml" rel="alternate" title="Luis' Webscience" type="application/rss+xml">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Le styles -->
+    <link rel="canonical" href="">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/markdown.css" rel="stylesheet">
+    <link href="/css/haroopress.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/code/default.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-64.png">
+
+    <!-- Le javascript -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.jsonp.js"></script>
+    <script src="/js/mustache.js"></script>
+    <script src="/js/apps/github.js"></script>
+    <script src="/js/apps/twitter.js"></script>
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+    <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="social">
+                
+                <a class="rss" href="/rss.xml">RSS</a>
+            </div>
+            
+
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/archives">Archives</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <form action="/search" id="search">
+                <input type="text" value="" placeholder="Search" name="q" id="search-text" class="placeholder">
+            </form>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+    <div class="row">
+        <div class="span3 side">
+            <div id="author" class="well">
+                <h3 class="title">About Author</h3>
+                 <div class="gravatar">
+                    <img src="http://www.gravatar.com/avatar/4400fbdafe7989d1e078275ef66f27f2?r=pg&amp;s=128.jpg&amp;d=identicon" />
+                </div>
+                <ul class="profile">
+                    <li class="nickname">Luis Park</li>
+                    <li class="blog"><a href="luispigu.github.com" target="_blank">luispigu.github.com</a></li>
+                    <li class="twitter"><a href="http://twitter.com/luispigu" target="_blank">@luispigu</a></li>
+                    <li class="github"><a href="https://github.com/luispigu" target="_blank"></li>
+                </ul>
+     
+                <p>
+                    <a href="https://twitter.com/luispigu" class="twitter-follow-button" data-show-count="true">Follow @luispigu</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </p>
+                
+            </div>
+            <div class="well recent">
+    <h6 class="title">Recent Articles</h6>
+    <ul class="nav nav-list">
+    
+        <li>
+            <a href="/post/jabaseukeuribteu-jedaero-baeugi-1ilca" target="_blank">자바스크립트 제대로 배우기 1일차</a>
+
+        </li>
+    
+    </ul>
+</div>
+            			<div class="well category">
+                <ul class="nav nav-list">
+                    <li class="nav-header title">Categories</li>
+                    <li class="active"><a href="/category">Home</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="span9 articles">
+            <div class="row">
+                <div class="span9">
+                    <div class="well">
+                        
+                        <div class="page-header">
+                            <p class="meta">
+                                Javascript <!-- 임시 카테고리 -->
+                                <span class="time">Tuesday, March 25 2014 11:34 AM</span>
+                            </p>
+                            <h1>자바스크립트 제대로 배우기 1일차</h1>
+                        </div>
+
+                        <div class="pull-right social-area">
+                            
+                            
+
+                            
+                        </div>
+
+                        <div class="markdown-wrapper">
+                            <h1 id="toc_0">자바스크립트 제대로 배우기 1일차</h1>
+<p><em class="label "><strong>이 포스팅은 페이스북 자바스크립트 제대로 배우기 스터디 그룹에서의 공부를 요약한 글입니다.</strong></em></p>
+<h2 id="toc_1">1장 자바스크립트란 무엇인가?</h2>
+
+<h5 id="toc_2">자바스크립트의 간단한 역사</h5>
+
+<ul>
+<li>1995년 자바스크립트 처음 등장했을 때 주요 목적은 입력 유효성 검사<br></li>
+<li>넷스케이프에서 일하던 브랜든 아이흐(Breadan Eich)가 Mocah, 나중엔 LiveScript라 불리는 스크립트 언어 개발<br></li>
+<li>경쟁사인 마이크로소프트에서 JScript 라는 이름의 자바스크립트를 포함한 IE3 출시<br></li>
+<li>자바스크립트 표준화 필요성 증가<br></li>
+<li>1997년 자바스크립트 1.1이 ECMA(유럽컴퓨터제작자협회)에 제안<br></li>
+<li>JavaScript 1.1 을 손질해 ECMA-262 를 만들었고 이 표준은 ECMAScript(에크마스크립트)라는 이름의 스크립트 언어를 정의<br></li>
+</ul>
+
+<h5 id="toc_3">자바스크립트 구현은 다음 세가지로 나뉨</h5>
+
+<ul>
+<li>코어 (ECMAScript) : 단순히 명세에서 설명하는 부분들을 구현한 언어 (문법, 타입, 선언문, 키워드, 예약어, 연산자, 객체)</li>
+<li>문서 객체 모델 (DOM) : XML을 HTML에서 사용할 수 있도록 확장한 API</li>
+<li>브라우저 객체 모델 (BOM)</li>
+</ul>
+
+<h5 id="toc_4">ECMAScript</h5>
+
+<ul>
+<li>ECMAScript 3.1 = ECMAScript-262 4판, 2009년 12월 3일 공식 발표<br></li>
+<li>2008부터 주요 웹 브라우저(인터넷 익스플로러, 파이어폭스, 사파리. 크롬, 오페라)는 모두 ECMA-262 3판을 준수<br></li>
+</ul>
+
+<h5 id="toc_5">DOM(Document Object Model)</h5>
+
+<ul>
+<li>DOM API를 통해 노드를 쉽게 제거하고, 추가하고, 교체하고, 수정할 수 있다.<br></li>
+<li>DOM level은 1부터 3까지 존재, 3으로 갈수록 확장 지원<br></li>
+</ul>
+
+<h5 id="toc_6">BOM(Browser Object Model)</h5>
+
+<ul>
+<li>브라우저 창에 접근하고 조작할 수 있게 하는 인터페이스<br></li>
+<li>BOM을 이용하면 브라우저에 표시된 페이지와는 별개의 컨텍스트에서 브라우저와 상호작용할 수 있다.<br></li>
+<li>HTML5에서 BOM을 공식 명세의 일부로 표준화 하고 있음.<br></li>
+</ul>
+
+<h2 id="toc_7">2장 HTML 속의 자바스크립트</h2>
+
+<h4 id="toc_8">Script 요소</h4>
+<p>자바스크립트를 HTML 페이지에 삽입하는 일차적인 방법은 <code>&lt;script&gt;</code> 요소를 통하는 것  </p>
+<h5 id="toc_9">6가지 속성 존재</h5>
+
+<ul>
+<li><strong>async</strong> - 옵션. 스크립트를 즉시 내려받지만 자원을 내려받거나 다른 스크립트를 불러오는 등 다른 페이지 작업을 방해해서는 안된다고 지시. 외부 스크립트 불러올 때만 유효</li>
+<li>charset - 옵션. src 속성으로 명시한 코드의 문자셋을 지정. 브라우저는 대개 이 속성의 값을 무시하므로 좀처럼 쓰이지 않는다 </li>
+<li><strong>defer</strong> - 옵션. 문서의 콘텐츠를 완전히 파싱하고 표시할 때까지 스크립트 실행을 지연해도 안전함을 나타냄. 외부 스크립트 파일을 불러올 때만 유효. IE7과 이전 버전에서는 인라인 스크립트에서도 이 속성을 허용</li>
+<li>language - 폐기됨. 원래는 코드 블록에서 사용한 스크립트 언어를 &quot;JavaScript&quot;, &quot;JavaScript1.2&quot; 처럼 나타낼 목적. 그러나 현재 대부분의 브라우저에서 이 속성을 무시하기에 써서는 안됨</li>
+<li>src - 옵션. 실행할 코드를 포함한 외부 파일의 위치를 지정</li>
+<li>type - 옵션. language 속성을 대체할 의도로 만들어짐. 스크립트 언어의 콘텐츠 타입(마임 타입)을 지정. 아직 습관적으로 또는 브라우저 호환성을 위해 &quot;text/javascript&quot;라 표기하곤 함. 사실은 생략해도 기본 값이므로 안전함</li>
+</ul>
+
+<h5 id="toc_10"><code>&lt;script&gt;</code>요소는 두가지 방법으로 사용</h5>
+
+<ol>
+<li>페이지에 직접 작성</li>
+<li>외부 파일에서 불러오기</li>
+</ol>
+<p>스크립트 요소 내부의 자바스크립트 코드는 위에서부터 차례로 해석된다.<br>
+인라인 자바스크립트코드, 외부 파일의 코드 해석하는 동안에는 페이지 처리가 멈춤.  </p>
+<ul>
+<li><p>페이지에 직접 작성한 예</p><pre><code class="javascript"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
+<span class="function"><span class="keyword">function</span> <span class="title">sayHi</span><span class="params">()</span>{</span>
+alert(<span class="string">"Hi!"</span>);
+}
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre></li>
+<li><p>외부파일에서 불러온 예</p><pre><code class="javascript"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"example.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre><p>스크립트 요소에서 가장 강력하면서도 논란이 끊이지 않는 부분은 다른 도메인에 있는 자바스크립트의 파일을 불러오는 능력(src 주소에 다른 도메인의 파일 입력)<br>
+<em class="label "><strong>주의 사항 : 다른 도메인에서 자바스크립트 파일을 가져올 때는 직접 관리하는 도메인이나 신뢰할 수 있는 곳에서 관리하는 도메인의 파일만 이용해야 한다.</strong></em>  </p></li>
+</ul>
+
+<h5 id="toc_11">태그 위치</h5>
+<p>전통적으로 페이지의 <code>&lt;head&gt;</code>요소 안에 쓰는 것이 일반적 : CSS파일이나 자바스크립트 파일 같은 외부 파일에 대한 참조를 한곳에서 관리하자는 목적<br>
+단점 : 자바스크립트 파일을 전부 <code>&lt;head&gt;</code>요소에서 불러오게 되는 경우 자바스크립트 코드를 전부 내려받고, 파싱하고, 해석을 끝낼 때까지 페이지 렌더링이 멈추게 된다.<br>
+<em class="label "><strong>위와 같은 이유로, 최신 웹 애플리케이션에서는 일반적으로 다음과 같이 자바스크립트 코드를 모두 <code>&lt;body&gt;</code>요소 안에, 페이지 콘텐츠 마지막에 쓴다.</strong></em>  </p>
+<h5 id="toc_12">스크립트 처리 지연</h5>
+<p>HTML 4.01 에서는 <code>&lt;script&gt;</code>요소에 defer라는 속성을 정의<br>
+defer의 목적은 스크립트에서 페이지 구조를 바꾸지 않는다고 명시하는 것<br>
+페이지 전체를 파싱한 후에 스크립트를 실행해도 상관 없음<br>
+defer 속성을 설정하면 브라우저는 해당 요소를 만나는 즉시 코드를 내려받지만 실행은 지연  </p><p>두개의 외부 스크립트를 쓰는 경우 이론적으로는 스크립트 명세 순서대로 차례로 실행됨.<br>
+하지만 항상 순서대로 실행되지는 않으며 가능하다면 <code>&lt;script&gt;</code>요소는 하나만 쓰는 것이 최선.
+이 내용은 HTML5 에서 명세화된 것이므로 HTML5를 지원하는 브라우저는 모두 인라인 스크립트의 defer 속성을 무시.<br>
+브라우저 마다 지원 여부가 다름. <em class="label "><strong>따라서 지연시킬 스크립트는 페이지 맨 마지막에 놓는 것이 여전히 최상.</strong></em></p>
+<h5 id="toc_13">비동기 스크립트</h5>
+<p>HTML5에서 <code>&lt;script&gt;</code> 요소에 도입된 async 속성.<br>
+외부 스크립트에만 적용되며 defer속성과 비슷한 방법으로 스크립트를 처리<br>
+목적은 스크립트를 모두 내려받아 실행할 때까지 기다릴 필요 없이 페이지 렌더링을 시작해도 좋으며 앞선 스크립트 파일을 기다리지 않고 뒤에 있는 스크립트 파일을 내려받아 실행해도 좋다고 명시하는 것<br>
+<em class="label "><strong>주의 : DOM을 조작하는 스크립트는 비동기적async 로 불러오지 않는 편이 좋음</strong></em></p>
+<h5 id="toc_14">XHTML에서 자바스크립트 사용하기</h5>
+<p>CDATA와 자바스크립트 주석 기호를 같이 사용</p><pre><code class="javascript"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
+<span class="comment">//&lt;![CDATA[</span>
+<span class="function"><span class="keyword">function</span> <span class="title">compare</span><span class="params">(a, b)</span>{</span>
+    <span class="keyword">if</span>(a &lt; b){
+        alert(<span class="string">"A is less than B"</span>);
+    }<span class="keyword">else</span> <span class="keyword">if</span>(a &gt; b){
+        alert(<span class="string">"A is greater than B"</span>);
+    }<span class="keyword">else</span>{
+        alert(<span class="string">"A is equal to B"</span>);
+    }
+}
+<span class="comment">//]]&gt;</span>
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre><p>이렇게 작성하는 경우 최신 브라우저 전체에서 모두 잘 동작함.  </p>
+<h5 id="toc_15">구식 문법</h5>
+<p>스크립트 요소를 지원하지 않는 브라우저에서 스크립트 요소 내부 콘텐츠를 보이지 않게 하는 것.<br>
+다음과 같이 스크립트 코드를 HTML 주석으로 감싸는 방법</p><pre><code class="javascript">&lt;script&gt;<span class="xml"><span class="comment">&lt;!--
+function sayHi(){
+    alert("Hi!");
+}
+//--&gt;</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</span></code></pre><p><em class="label "><strong>하지만 더 이상 필요하지 않으므로 써서는 안된다.</strong></em></p>
+<h4 id="toc_16">인라인 코드와 외부 파일</h4>
+<p>일반적으로 가능한 한 자바스크립트는 외부 파일로 분리하는 방법을 모범 사례로 간주.<br>
+외부 파일을 쓰면 다음과 같은 이점이 존재</p>
+<ul>
+<li>관리하기 쉽다 - 자바스크립트 파일을 모두 디렉터리 하나에 모아 놓으면 마크업과 무관하게 자바스크립트 코드를 수정가능하므로 훨씬 편리</li>
+<li>캐싱 - 서로 다른 페이지에서 같은 파일을 사용한다면 한 번만 내려받으면 되므로 페이지를 불러오는 시간이 짧아짐</li>
+<li>미래에도 안전하다 - CDATA나 주석 편법을 쓰지 않아도 된다</li>
+</ul>
+
+<h4 id="toc_17">문서 모드</h4>
+<p>인터넷 익스플로러 5.5는 독타입 스위칭을 통해 문서 모드라는 개념을 도입(처음에는 2가지 쿽스, 표준 모드),<br>
+두 모드 사이의 주요 차이는 콘텐츠 렌더링과 관련된 것이지만 자바스크립트에도 영향이 있음
+1. 쿽스 모드 : 여러 비표준 기능을 사용함
+2. 표준 모드 : 표준에 가까운 방식으로 동작
+3. 거의 표준 모드 : 표준 모드의 기능을 대부분 지원하지만 표준 모드만큼 엄격하지 않음  </p><p><em class="label "><strong>문서의 시작에 독타입을 쓰지 않으면 모든 브라우저에서 쿽스 모드를 사용</strong></em><br>
+매우 나쁜 사례로 쿽스 모드는 브라우저마다 대단히 많이 다르며 핵을 쓰지 않고는 브라우저 사이에 일관성을 전혀 기대할 수 없음</p>
+<ul>
+<li>HTML5 독타입
+<code>javascript
+&lt;!-- HTML5 --&gt;
+&lt;!DOCTYPE html&gt;
+</code></li>
+</ul>
+
+<h4 id="toc_18"><code>&lt;no script&gt;</code> 요소</h4>
+<p>자바스크립트를 지원하지 않을 때 대체콘텐츠를 제공하기 위해 만들어짐</p>
+<ul>
+<li>브라우저가 스크립트를 지원하지 않거나</li>
+<li>브라우저의 스크립트 지원이 꺼져 있을 때</li>
+</ul>
+
+                        </div>
+
+                        <hr />
+                        
+                                            
+
+                        
+    <div class="row-fluid">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'luispark'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    </div>
+    <!--<div class="row">-->
+        <!--<div class="offset3 span9">-->
+            <!--<strong>tags</strong> :-->
+            <!---->
+        <!--</div>-->
+    <!--</div>-->
+</div><!-- /container -->
+
+
+        <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span9 offset3">
+                    <div class="well">
+                        <p class="pull-right"><a href="#" class="backtotop">Back to top</a></p>
+                            <strong>haroopress</strong> developed by <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a>,<a href="http://twitter.com/haroopress" target="_blank">@haroopress</a> and source in <a href="https://github.com/rhiokim/haroopress" target="_blank">github</a><br/>
+                            Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.<br />
+                            Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+</body>
+</html>
