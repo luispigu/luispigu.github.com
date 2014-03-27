@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>자바스크립트 제대로 배우기 2일차 |  Luis' Webscience</title>
+    <meta name="description" content="Web, JavaScript에 관한 이야기">
+    <meta name="author" content="Luis Park">
+    <meta name="keywords" content="" />
+    <meta name="generator" content="haroopress v0.9.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/rss.xml" rel="alternate" title="Luis' Webscience" type="application/rss+xml">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Le styles -->
+    <link rel="canonical" href="">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/markdown.css" rel="stylesheet">
+    <link href="/css/haroopress.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/code/default.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-64.png">
+
+    <!-- Le javascript -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.jsonp.js"></script>
+    <script src="/js/mustache.js"></script>
+    <script src="/js/apps/github.js"></script>
+    <script src="/js/apps/twitter.js"></script>
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+    <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="social">
+                
+                <a class="rss" href="/rss.xml">RSS</a>
+            </div>
+            
+
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/archives">Archives</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <form action="/search" id="search">
+                <input type="text" value="" placeholder="Search" name="q" id="search-text" class="placeholder">
+            </form>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+    <div class="row">
+        <div class="span3 side">
+            <div id="author" class="well">
+                <h3 class="title">About Author</h3>
+                 <div class="gravatar">
+                    <img src="http://www.gravatar.com/avatar/4400fbdafe7989d1e078275ef66f27f2?r=pg&amp;s=128.jpg&amp;d=identicon" />
+                </div>
+                <ul class="profile">
+                    <li class="nickname">Luis Park</li>
+                    <li class="blog"><a href="luispigu.github.com" target="_blank">luispigu.github.com</a></li>
+                    <li class="twitter"><a href="http://twitter.com/luispigu" target="_blank">@luispigu</a></li>
+                    <li class="github"><a href="https://github.com/luispigu" target="_blank"></li>
+                </ul>
+     
+                <p>
+                    <a href="https://twitter.com/luispigu" class="twitter-follow-button" data-show-count="true">Follow @luispigu</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </p>
+                
+            </div>
+            <div class="well recent">
+    <h6 class="title">Recent Articles</h6>
+    <ul class="nav nav-list">
+    
+        <li>
+            <a href="/post/jabaseukeuribteu-jedaero-baeugi-1ilca" target="_blank">자바스크립트 제대로 배우기 1일차</a>
+
+        </li>
+    
+        <li>
+            <a href="/post/javascript-2nd-day" target="_blank">자바스크립트 제대로 배우기 2일차</a>
+
+        </li>
+    
+    </ul>
+</div>
+            			<div class="well category">
+                <ul class="nav nav-list">
+                    <li class="nav-header title">Categories</li>
+                    <li class="active"><a href="/category">Home</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="span9 articles">
+            <div class="row">
+                <div class="span9">
+                    <div class="well">
+                        
+                        <div class="page-header">
+                            <p class="meta">
+                                Javascript <!-- 임시 카테고리 -->
+                                <span class="time">Friday, March 28 2014 12:41 AM</span>
+                            </p>
+                            <h1>자바스크립트 제대로 배우기 2일차</h1>
+                        </div>
+
+                        <div class="pull-right social-area">
+                            
+                            
+
+                            
+                        </div>
+
+                        <div class="markdown-wrapper">
+                            <h1 id="toc_23">자바스크립트 제대로 배우기 2일차</h1>
+<p><em class="label "><strong>이 포스팅은 페이스북 자바스크립트 제대로 배우기 그룹의 공부 내용을 요약한 것입니다.</strong></em></p>
+<h2 id="toc_24">3장 언어의 기초</h2>
+<p><em>이 장을 읽기 전엔 주 내용인 문법이나 데이터 타입, 제어문 등이</em><br>
+<em>어차피 이전에 다른 언어 공부한 경험이 있기 때문에 쉬울 거라 생각했다.</em><br>
+<em>하지만 자바스크립트 만의 특징이랄까 정말 다른 부분이 많아서 생각보다 읽는데 너무 오래걸렸다.</em><br>
+<em>그래서 기존 언어와 좀 다르고 많이 헷갈리는 부분 위주로 정리를 했다.</em>  </p><p><strong>아래 내용은 ECMAScript 3판에서 정의된 내용을 바탕으로 함.</strong></p>
+<h4 id="toc_25">3.1 문법</h4>
+
+<ul>
+<li>변수나 함수 이름, 연산자 모두 대소문자를 구분</li>
+<li>ECMAScript 식별자는 관습적으로 카멜 케이스 사용</li>
+</ul>
+
+<h5 id="toc_26">Strict 모드</h5>
+
+<ul>
+<li>기존과는 다른 방식으로 좀 더 엄격하게 자바스크립트를 파싱하고 실행하라고 지시하는 것</li>
+<li><code>&quot;use strict&quot;;</code> 라는 문장을 스크립트 맨 위에 추가하면 전체 스크립트에 스트릭트 모드 설정</li>
+<li>함수 하나만 스트릭트 모드로 실행하려면 함수 본문 맨 앞에 추가</li>
+</ul>
+
+<h4 id="toc_27">3.3 변수</h4>
+
+<ul>
+<li>var 연산자는 변수를 로컬 스코프(local scope)에서 정의한다는 점을 반드시 기억</li>
+<li>함수 안에서 var 연산자를 생략하면 변수를 전역으로 정의할 수 있다</li>
+</ul>
+
+<h4 id="toc_28">3.4 데이터 타입</h4>
+
+<ul>
+<li>ECMAScript의 다섯가지 기본 데이터 타입(원시-primitive-타입) + 객체
+
+<ul>
+<li>Undefined</li>
+<li>Null</li>
+<li>Boolean(불리언)</li>
+<li>숫자</li>
+<li>문자열</li>
+<li>객체 : 이름-값 쌍의 순서 없는 목록</li>
+</ul></li>
+<li>변수의 데이터 타입을 알아내기 위해선 <code>typeof</code> 연산자를 사용</li>
+<li>Undefined : var를 써서 변수를 정의했지만 초기화 하지 않았다면 해당 변수에 할당됨
+
+<ul>
+<li>하지만 아예 선언되지 않은 변수도 typeof 로는 undefined가 나옴</li>
+<li><strong>그러므로 변수를 선언할 때는 꼭 초기화를 해주는 습관을 기르도록 하는 것이 좋음</strong></li>
+<li>그러면 선언된 변수인지 선언되지 않은 변수인지 확인 가능</li>
+</ul></li>
+<li>Boolean : 가장 많이 쓰이는 데이터 타입 중 하나로 true와 false 두가지 리터럴 값만 가짐
+
+<ul>
+<li>값을 불리언으로 변환할 때 <code>Boolean()</code>함수를 사용</li>
+<li>어떤 타입의 데이터에서도 호출할 수 있고 항상 불리언 값을 반환</li>
+<li>자동 변환이 되므로 제어문에서 사용하는 변수에 대해 정확하게 파악 필요</li>
+<li><strong>만약 실수로 객체를 제어문에서 쓰게 되면 (항상 참이므로) 애플리케이션의 흐름이 완전히 달라짐</strong></li>
+</ul></li>
+<li>숫자 타입 : IEEE-754형식을 통해 정수와 부동소수점 숫자를 나타냄
+
+<ul>
+<li>기본적으로 10진법 사용</li>
+<li>부동소스점 숫자 사칙 연산에서는 부정확한 값이 나올 수 있음</li>
+<li>ex)0.1 + 0.2 의 값이 0.3이 안나옴. 반올림 에러 때문.</li>
+<li>숫자형 값 중에는 NaN이란 특별한 값 존재 : 숫자를 반환할 것으로 의도한 조작이 실패했을 때 반환, 에러를 반환하는 것이 아님</li>
+<li><code>isNaN()</code> 함수를 이용해 해당 값이 숫자가 아닌 값인지 검사</li>
+<li>숫자가 아닌 값을 숫자로 바꾸는 함수 : Number(), parseInt(), parseFloat()</li>
+<li>parseInt의 두번째 매개변수로 진법 표시 가능 ex) <code>parseInt(&quot;0xAF&quot;, 16)</code> 16진수 의미</li>
+<li>늘 뒤에 10을 매개변수로 넣는 습관(평소에 10진법 사용하므로)을 들이면 좋음</li>
+</ul></li>
+<li>문자열 타입 :16비트 유니코드 문자의 연속, &quot;&quot; 나 &#39;&#39;로 감싸서 표현
+
+<ul>
+<li>문자열 변환은 toString() 메서드를 사용</li>
+<li>toString() 메서드를 호출할 값이 null이거나 undefined일 가능성이 있다면 String() 사용</li>
+</ul></li>
+<li>객체 타입 : 데이터와 기능의 집합 <code>var o = new Object();</code>와 같은 형식으로 사용
+
+<ul>
+<li>ECMAScript의 Object 타입은 이 타입에서 파생하는 모든 객체의 원형</li>
+<li>Object 타입의 인스턴스는 Object 타입의 프로퍼티와 메서드를 전부 상속</li>
+<li><code>hasOwnProperty(propertyName)</code> ,<code>toString()</code>, <code>valueOf()</code>등의 프로퍼티와 메서드를 가짐</li>
+</ul></li>
+</ul>
+
+<h4 id="toc_29">3.5 연산자</h4>
+<p>여기부터는 내일로;;</p>
+                        </div>
+
+                        <hr />
+                        
+                                            
+                        <div class="meta clearfix">
+                            
+
+                            
+                            <div class="pull-left prev-next">
+                                <a href="/post/jabaseukeuribteu-jedaero-baeugi-1ilca" class="button prev"><i class="icon"></i> 자바스크립트 제대로 배우기 1일차</a>
+                            </div>
+                            
+                        </div>
+                    
+
+                        
+    <div class="row-fluid">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'luispark'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    </div>
+    <!--<div class="row">-->
+        <!--<div class="offset3 span9">-->
+            <!--<strong>tags</strong> :-->
+            <!---->
+            <!--<a href="/tag/javascript">javascript</a>&nbsp;-->
+            <!---->
+        <!--</div>-->
+    <!--</div>-->
+</div><!-- /container -->
+
+
+        <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span9 offset3">
+                    <div class="well">
+                        <p class="pull-right"><a href="#" class="backtotop">Back to top</a></p>
+                            <strong>haroopress</strong> developed by <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a>,<a href="http://twitter.com/haroopress" target="_blank">@haroopress</a> and source in <a href="https://github.com/rhiokim/haroopress" target="_blank">github</a><br/>
+                            Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.<br />
+                            Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+</body>
+</html>
