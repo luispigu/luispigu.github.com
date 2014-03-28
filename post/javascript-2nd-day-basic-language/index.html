@@ -101,12 +101,12 @@
     <ul class="nav nav-list">
     
         <li>
-            <a href="/post/jabaseukeuribteu-jedaero-baeugi-1ilca" target="_blank">자바스크립트 제대로 배우기 1일차</a>
+            <a href="/post/javascript-1st-day-Introduction-and-html-javascript" target="_blank">자바스크립트 제대로 배우기 1일차</a>
 
         </li>
     
         <li>
-            <a href="/post/javascript-2nd-day" target="_blank">자바스크립트 제대로 배우기 2일차</a>
+            <a href="/post/javascript-2nd-day-basic-language" target="_blank">자바스크립트 제대로 배우기 2일차</a>
 
         </li>
     
@@ -227,7 +227,98 @@
 </ul>
 
 <h4 id="toc_29">3.5 연산자</h4>
-<p>여기부터는 내일로;;</p>
+<p>데이터 조작에 쓸 수 있는 연산자  </p>
+<h5 id="toc_30">단항 연산자</h5>
+
+<ul>
+<li>증감 연산자 : 피연산자 다음에 쓴 증감 연산자는 문장을 평가한 다음에 적용됨 ex)<code>age++;</code><br></li>
+</ul>
+<p><strong>공통적인 특징</strong></p>
+<ul>
+<li>연산자는 정수에만 쓸 수 있는 것이 아니라 문자열이나 불리언, 부동소수점 숫자, 객체에도 사용 가능</li>
+<li>유효한 숫자 형태의 문자열에 적용하면 문자열을 숫자로 바꾼 후 연산</li>
+<li>유요한 숫자 형태의 문자열이 아니라면 변수의 값에 NaN이 저장</li>
+<li>값이 false인 불리언에 적용하면 해당 값을 0 으로 바꾼 후 연산</li>
+<li>값이 true인 불리언에 적용하면 해당 값을 1로 바꾼 후 연산</li>
+<li>객체에 적용하면 해당 객체의 valueOf() 메서드를 먼저 호출한 후 나온 값으로 연산, 만약 결과가 NaN이라면 toString() 메서드를 호출한 후 다른 규칙을 다시 적용</li>
+</ul>
+
+<h5 id="toc_31">비트 연산자</h5>
+
+<ul>
+<li>ECMAScript에서 모든 숫자는 IEEE-754 64비트 형식으로 저장</li>
+<li>하지만 64비트를 그대로 사용안하고 값을 32비트 정수로 변환하여 비트 연산자를 적용한 후 결과를 다시 64비트로 변환</li>
+<li>기본적으로 모든 정수는 부호 붙은 정수로 표현됨</li>
+</ul>
+
+<h5 id="toc_32">불리언 연산자</h5>
+
+<ul>
+<li>논리 AND와 논리 OR에서 두 피연산자에 따른 결과가 달라짐</li>
+<li>피연산자 2개에 따라 단축연산이 일어날 가능성 존재함
+
+<ul>
+<li>예) 논리 AND 연산에서 첫 번째 피연산자가 false 인 경우 두 번째 피연산자는 검증 안하고 넘어감. 이 경우 두 번째 피연산자가 선언되지 않은 변수를 사용한다 해도 에러 발생 안하고 넘어갈 수 있음. 위험성 존재</li>
+<li>예) 논리 OR 연산에서 첫 번째 피연산자가 true 인 경우 두 번째 피연산자는 검증 안하고 넘어감.</li>
+</ul></li>
+<li>논리 OR 연산을 이용해 변수에 null 이나 undefined가 저장되지 않게 할 수 있음
+
+<ul>
+<li><code>var myObject = peferredObject || backupObject;</code></li>
+<li>논리 OR (<code>||</code>)을 이용하여 선호하는 값이 없는 경우에 백업해둔 값을 지정할 수 있음.</li>
+</ul></li>
+</ul>
+
+<h5 id="toc_33">동일 연산자(<code>==</code>), 일치 연산자(<code>===</code>)</h5>
+
+<ul>
+<li>동일과 비동일 연산자(<code>==, !=</code>)는 비교하기 전에 타입을 변경</li>
+<li>일치와 불일치 연산자(<code>===, !==</code>)는 타입 변환 없이 비교</li>
+</ul>
+<p>기타 연산자에 대한 내용은 다른 언어들과 비슷함, 다만 피연산자가 객체인 경우는 특이한 경우 존재. 반드시 찾아보고 할 것.  </p>
+<h4 id="toc_34">3.6 문장</h4>
+
+<ul>
+<li>if문, do-while문, while문, for문 사용 가능, break, continue 가능, switch 가느</li>
+<li>for-in 문
+
+<ul>
+<li>객체의 프로퍼티를 나열하는데 사용</li>
+<li>프로퍼티에는 순서가 없으므로 어떤 순서로 반환할지 예측 불가능</li>
+<li>브라우저 호환성을 위해 for-in루프를 실행 전 객체를 가리키는 변수의 값이 null이나 undefined인지 확인하는 편이 좋음</li>
+</ul></li>
+<li>with 문
+
+<ul>
+<li>코드의 스코프를 특정 객체에 고정</li>
+<li>아래와 같이 자주 참조 되는 부분(location객체)을 줄여서 쓸 수 있음
+<code>javascript
+with(location){
+var qs = search.substring(1);
+var hostName = hostname;
+var url = href;
+}
+</code></li>
+</ul></li>
+</ul>
+
+<h4 id="toc_35">3.7 함수</h4>
+
+<ul>
+<li>ECMAScript의 함수는 꼭 값을 반환하지 않아도 됨</li>
+<li>return 문 뒤에 반환값을 쓰지 않는 경우 undefined 값을 반환</li>
+<li>함수의 매개변수
+
+<ul>
+<li>매개변수 숫자를 따지지 않으며 데이터 타입도 체크하지 않음</li>
+<li>함수는 arguments라는 객체를 갖는데 이 객체를 통해 매개변수 값이 접근 가능</li>
+<li><code>arguments.length</code>를 통해 매개변수가 몇 개 전달되었는지 알 수 있음</li>
+<li><code>arguments.length</code>를 통해 매개변수 개수에 따라 다른 동작을 수행하게 할 수 있음 - 오버로딩은 아니지만 흉내내기 가능</li>
+<li>arguments[]에 값을 지정해도 이름 붙은 매개변수는 변하지 않는다</li>
+<li>오버로딩이 없다</li>
+</ul></li>
+</ul>
+
                         </div>
 
                         <hr />
@@ -238,7 +329,7 @@
 
                             
                             <div class="pull-left prev-next">
-                                <a href="/post/jabaseukeuribteu-jedaero-baeugi-1ilca" class="button prev"><i class="icon"></i> 자바스크립트 제대로 배우기 1일차</a>
+                                <a href="/post/javascript-1st-day-Introduction-and-html-javascript" class="button prev"><i class="icon"></i> 자바스크립트 제대로 배우기 1일차</a>
                             </div>
                             
                         </div>
