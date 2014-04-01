@@ -15,6 +15,8 @@
     <![endif]-->
 
     <link href="/rss.xml" rel="alternate" title="Luis' Webscience" type="application/rss+xml">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css'>
 
     <!-- Le styles -->
     <link rel="canonical" href="">
@@ -26,7 +28,7 @@
     <link href="/css/haroopress.css" rel="stylesheet">
     <link href="/css/theme.css" rel="stylesheet">
     <link href="/css/code/default.css" rel="stylesheet">
-    
+
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="72x72" href="/favicon-64.png">
@@ -41,117 +43,104 @@
 </head>
 <body data-spy="scroll" data-target=".subnav" data-offset="50">
 
-        <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
+    <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
         <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-
-          <a class="pull-right" href="/rss.xml"><span class="icon-rss"></span></a>
-          
-
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/archives">Archives</a>
-              </li>
-              <li>
-                <a href="/slides">Slides</a>
-              </li>
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="social">
                 
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    
-<link href="/css/code/default.css" rel="stylesheet">
-<div class="container page-archive">
-    <div class="row">
-        <div class="span3">
-            <div id="author" class="well">
-                <div>
-                    <h3>About Author</h3>
-                    <ul class="thumbnails">
-                        <li>
-                            <a class="thumbnail">
-                                <img src="http://www.gravatar.com/avatar/4400fbdafe7989d1e078275ef66f27f2?r=pg&amp;s=128.jpg&amp;d=identicon" />
-                            </a>
-                        </li>
-                    </ul>
-                    <p>
-                        <strong>Luis Park</strong><br/>
-                        blog: <a href="luispigu.github.com" target="_blank">luispigu.github.com</a><br/>
-                        twitter: <a href="http://twitter.com/luispigu" target="_blank">@luispigu</a><br/>
-                        github: <a href="https://github.com/" target="_blank"></a>
-                    </p>
-                    <p>
-                        <a href="https://twitter.com/luispigu" class="twitter-follow-button" data-show-count="true">Follow @luispigu</a>
-                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                    </p>
-                    <p>
-                        
-                    </p>
-                </div>
-                <div>
-                    <h3>About this Article</h3>
-                    <p>
-                        <h5>Date Released:</h5>
-                        <span>Tuesday, March 25 2014 11:34 AM</span>
-                    </p>
-                </div>
+                <a class="rss" href="/rss.xml">RSS</a>
             </div>
-                        <div class="well">
-                <ul class="nav nav-list">
-                    <li class="nav-header">Categories</li>
-                    <li class=""><a href="/category"><i class="icon-home"></i> Home</a></li>
+            
+
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/archives">Archives</a>
+                    </li>
                     
                 </ul>
             </div>
+            <form action="/search" id="search">
+                <input type="text" value="" placeholder="Search" name="q" id="search-text" class="placeholder">
+            </form>
+        </div>
+    </div>
+</div>
 
-            
-<div class="well">
+    <div class="container">
+    <div class="row">
+        <div class="span3 side">
+            <div id="author" class="well">
+                <h3 class="title">About Author</h3>
+                 <div class="gravatar">
+                    <img src="http://www.gravatar.com/avatar/4400fbdafe7989d1e078275ef66f27f2?r=pg&amp;s=128.jpg&amp;d=identicon" />
+                </div>
+                <ul class="profile">
+                    <li class="nickname">Luis Park</li>
+                    <li class="blog"><a href="luispigu.github.com" target="_blank">luispigu.github.com</a></li>
+                    <li class="twitter"><a href="http://twitter.com/luispigu" target="_blank">@luispigu</a></li>
+                    <li class="github"><a href="https://github.com/luispigu" target="_blank"></li>
+                </ul>
+     
+                <p>
+                    <a href="https://twitter.com/luispigu" class="twitter-follow-button" data-show-count="true">Follow @luispigu</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </p>
+                
+            </div>
+            <div class="well recent">
+    <h6 class="title">Recent Articles</h6>
     <ul class="nav nav-list">
-        <li class="nav-header">Recent Articles</li>
     
         <li>
-            <a href="/post/javascript-study3-variable-and-scope-memory" target="_blank">자바스크립트 제대로 배우기 - 4.변수와 스코프, 메모리
-            <span class="label">Luis Park</span></a>
+            <a href="/post/javascript-study1-Introduction-and-html-javascript" target="_blank">자바스크립트 제대로 배우기 - 1. 자바스크립트란 무엇인가, 2. HTML 속의 자바스크립트</a>
+
         </li>
     
         <li>
-            <a href="/post/javascript-study2-day-basic-language" target="_blank">자바스크립트 제대로 배우기 - 3.언어의 기초
-            <span class="label">Luis Park</span></a>
+            <a href="/post/javascript-study2-day-basic-language" target="_blank">자바스크립트 제대로 배우기 - 3.언어의 기초</a>
+
         </li>
     
         <li>
-            <a href="/post/javascript-study1-Introduction-and-html-javascript" target="_blank">자바스크립트 제대로 배우기 - 1. 자바스크립트란 무엇인가, 2. HTML 속의 자바스크립트
-            <span class="label">Luis Park</span></a>
+            <a href="/post/javascript-study3-variable-and-scope-memory" target="_blank">자바스크립트 제대로 배우기 - 4.변수와 스코프, 메모리</a>
+
         </li>
     
     </ul>
 </div>
-
+            			<div class="well category">
+                <ul class="nav nav-list">
+                    <li class="nav-header title">Categories</li>
+                    <li class="active"><a href="/category">Home</a></li>
+                    
+                </ul>
+            </div>
         </div>
-        <div class="span9">
+        <div class="span9 articles">
             <div class="row">
                 <div class="span9">
-                    <div class="well bg">
+                    <div class="well">
                         
                         <div class="page-header">
+                            <p class="meta">
+                                Javascript <!-- 임시 카테고리 -->
+                                <span class="time">Tuesday, March 25 2014 11:34 AM</span>
+                            </p>
                             <h1>자바스크립트 제대로 배우기 - 1. 자바스크립트란 무엇인가, 2. HTML 속의 자바스크립트</h1>
                         </div>
 
                         <div class="pull-right social-area">
-                                                
-                                                
+                            
+                            
 
                             
                         </div>
@@ -226,17 +215,19 @@
 <p>스크립트 요소 내부의 자바스크립트 코드는 위에서부터 차례로 해석된다.<br>
 인라인 자바스크립트코드, 외부 파일의 코드 해석하는 동안에는 페이지 처리가 멈춤.  </p>
 <ul>
-<li><p>페이지에 직접 작성한 예</p><pre><code class="javascript"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
-<span class="function"><span class="keyword">function</span> <span class="title">sayHi</span><span class="params">()</span>{</span>
-alert(<span class="string">"Hi!"</span>);
-}
-</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-</code></pre></li>
-<li><p>외부파일에서 불러온 예</p><pre><code class="javascript"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"example.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-</code></pre><p>스크립트 요소에서 가장 강력하면서도 논란이 끊이지 않는 부분은 다른 도메인에 있는 자바스크립트의 파일을 불러오는 능력(src 주소에 다른 도메인의 파일 입력)<br>
-<em class="label "><strong>주의 사항 : 다른 도메인에서 자바스크립트 파일을 가져올 때는 직접 관리하는 도메인이나 신뢰할 수 있는 곳에서 관리하는 도메인의 파일만 이용해야 한다.</strong></em>  </p></li>
+<li>페이지에 직접 작성한 예</li>
 </ul>
-
+<pre><code class="javascript"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript">
+    <span class="function"><span class="keyword">function</span> <span class="title">sayHi</span><span class="params">()</span>{</span>
+    alert(<span class="string">"Hi!"</span>);
+</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre>
+<ul>
+<li>외부파일에서 불러온 예</li>
+</ul>
+<pre><code class="javascript"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"example.js"</span>&gt;</span><span class="javascript"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+</code></pre><p>스크립트 요소에서 가장 강력하면서도 논란이 끊이지 않는 부분은 다른 도메인에 있는 자바스크립트의 파일을 불러오는 능력(src 주소에 다른 도메인의 파일 입력)<br>
+<em class="label "><strong>주의 사항 : 다른 도메인에서 자바스크립트 파일을 가져올 때는 직접 관리하는 도메인이나 신뢰할 수 있는 곳에서 관리하는 도메인의 파일만 이용해야 한다.</strong></em>  </p>
 <h5 id="toc_11">태그 위치</h5>
 <p>전통적으로 페이지의 <code>&lt;head&gt;</code>요소 안에 쓰는 것이 일반적 : CSS파일이나 자바스크립트 파일 같은 외부 파일에 대한 참조를 한곳에서 관리하자는 목적<br>
 단점 : 자바스크립트 파일을 전부 <code>&lt;head&gt;</code>요소에서 불러오게 되는 경우 자바스크립트 코드를 전부 내려받고, 파싱하고, 해석을 끝낼 때까지 페이지 렌더링이 멈추게 된다.<br>
@@ -294,13 +285,11 @@ function sayHi(){
 3. 거의 표준 모드 : 표준 모드의 기능을 대부분 지원하지만 표준 모드만큼 엄격하지 않음  </p><p><em class="label "><strong>문서의 시작에 독타입을 쓰지 않으면 모든 브라우저에서 쿽스 모드를 사용</strong></em><br>
 매우 나쁜 사례로 쿽스 모드는 브라우저마다 대단히 많이 다르며 핵을 쓰지 않고는 브라우저 사이에 일관성을 전혀 기대할 수 없음</p>
 <ul>
-<li>HTML5 독타입
-<code>javascript
-&lt;!-- HTML5 --&gt;
-&lt;!DOCTYPE html&gt;
-</code></li>
+<li>HTML5 독타입</li>
 </ul>
-
+<pre><code class="html"><span class="comment">&lt;!-- HTML5 --&gt;</span>
+<span class="doctype">&lt;!DOCTYPE html&gt;</span>
+</code></pre>
 <h4 id="toc_18"><code>&lt;no script&gt;</code> 요소</h4>
 <p>자바스크립트를 지원하지 않을 때 대체콘텐츠를 제공하기 위해 만들어짐</p>
 <ul>
@@ -309,12 +298,14 @@ function sayHi(){
 </ul>
 
                         </div>
+
                         <hr />
+                        
                                             
-                        <div class="row-fluid">
+                        <div class="meta clearfix">
                             
-                            <div class="pull-right">
-                                <a href="/post/javascript-study2-day-basic-language" class="btn btn-info">자바스크립트 제대로 배우기 - 3.언어의 기초 <i class="icon-white icon-chevron-right"></i></a>
+                            <div class="pull-right prev-next">
+                                <a href="/post/javascript-study2-day-basic-language" class="button next">자바스크립트 제대로 배우기 - 3.언어의 기초<i class="icon"></i></a>
                             </div>
                             
 
@@ -359,9 +350,9 @@ function sayHi(){
         <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="span12 ">
+                <div class="span9 offset3">
                     <div class="well">
-                        <p class="pull-right"><a href="#">Back to top</a></p>
+                        <p class="pull-right"><a href="#" class="backtotop">Back to top</a></p>
                             <strong>haroopress</strong> developed by <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a>,<a href="http://twitter.com/haroopress" target="_blank">@haroopress</a> and source in <a href="https://github.com/rhiokim/haroopress" target="_blank">github</a><br/>
                             Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.<br />
                             Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
