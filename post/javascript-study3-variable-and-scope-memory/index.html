@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>자바스크립트 제대로 배우기 - 4.변수와 스코프, 메모리 |  Luis' Webscience</title>
+    <meta name="description" content="Web, JavaScript에 관한 이야기">
+    <meta name="author" content="Luis Park">
+    <meta name="keywords" content="" />
+    <meta name="generator" content="haroopress v0.9.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/rss.xml" rel="alternate" title="Luis' Webscience" type="application/rss+xml">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Le styles -->
+    <link rel="canonical" href="">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/markdown.css" rel="stylesheet">
+    <link href="/css/haroopress.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/code/default.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-64.png">
+
+    <!-- Le javascript -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.jsonp.js"></script>
+    <script src="/js/mustache.js"></script>
+    <script src="/js/apps/github.js"></script>
+    <script src="/js/apps/twitter.js"></script>
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+    <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="social">
+                
+                <a class="rss" href="/rss.xml">RSS</a>
+            </div>
+            
+
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/archives">Archives</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <form action="/search" id="search">
+                <input type="text" value="" placeholder="Search" name="q" id="search-text" class="placeholder">
+            </form>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+    <div class="row">
+        <div class="span3 side">
+            <div id="author" class="well">
+                <h3 class="title">About Author</h3>
+                 <div class="gravatar">
+                    <img src="http://www.gravatar.com/avatar/4400fbdafe7989d1e078275ef66f27f2?r=pg&amp;s=128.jpg&amp;d=identicon" />
+                </div>
+                <ul class="profile">
+                    <li class="nickname">Luis Park</li>
+                    <li class="blog"><a href="luispigu.github.com" target="_blank">luispigu.github.com</a></li>
+                    <li class="twitter"><a href="http://twitter.com/luispigu" target="_blank">@luispigu</a></li>
+                    <li class="github"><a href="https://github.com/luispigu" target="_blank"></li>
+                </ul>
+     
+                <p>
+                    <a href="https://twitter.com/luispigu" class="twitter-follow-button" data-show-count="true">Follow @luispigu</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </p>
+                
+            </div>
+            <div class="well recent">
+    <h6 class="title">Recent Articles</h6>
+    <ul class="nav nav-list">
+    
+        <li>
+            <a href="/post/javascript-study1-Introduction-and-html-javascript" target="_blank">자바스크립트 제대로 배우기 - 1. 자바스크립트란 무엇인가, 2. HTML 속의 자바스크립트</a>
+
+        </li>
+    
+        <li>
+            <a href="/post/javascript-study2-day-basic-language" target="_blank">자바스크립트 제대로 배우기 - 3.언어의 기초</a>
+
+        </li>
+    
+        <li>
+            <a href="/post/javascript-study3-variable-and-scope-memory" target="_blank">자바스크립트 제대로 배우기 - 4.변수와 스코프, 메모리</a>
+
+        </li>
+    
+    </ul>
+</div>
+            			<div class="well category">
+                <ul class="nav nav-list">
+                    <li class="nav-header title">Categories</li>
+                    <li class="active"><a href="/category">Home</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="span9 articles">
+            <div class="row">
+                <div class="span9">
+                    <div class="well">
+                        
+                        <div class="page-header">
+                            <p class="meta">
+                                Javascript <!-- 임시 카테고리 -->
+                                <span class="time">Tuesday, April 1 2014 3:21 PM</span>
+                            </p>
+                            <h1>자바스크립트 제대로 배우기 - 4.변수와 스코프, 메모리</h1>
+                        </div>
+
+                        <div class="pull-right social-area">
+                            
+                            
+
+                            
+                        </div>
+
+                        <div class="markdown-wrapper">
+                            <h1 id="toc_38">자바스크립트 제대로 배우기3</h1>
+<p><em class="label "><strong>이 포스팅은 페이스북 자바스크립트 제대로 배우기 그룹의 공부 내용을 요약한 것입니다.</strong></em></p>
+<h2 id="toc_39">4장 변수와 스코프, 메모리</h2>
+
+<ul>
+<li>자바스크립트 변수는 느슨한 타입을 취함 - 특정 시간에서 변수는 특정 값을 가리키는 이름일 뿐임</li>
+</ul>
+
+<h4 id="toc_40">4.1 원시 값과 참조 값</h4>
+
+<ul>
+<li>ECMAScript의 변수는 원시 값과 참조 값 두가지 타입의 데이터를 저장가능</li>
+<li>원시 값 - 단순한 데이터로 Undefined,Null,불리언,숫자,문자열</li>
+<li>참조 값 - 여러 값으로 구성되는 객체</li>
+</ul>
+
+<h5 id="toc_41">원시 값과 참조 값의 차이</h5>
+
+<ul>
+<li>참조 값을 다룰 때는 언제든 프로퍼티와 메서드를 추가하거나 바꾸고 삭제 가능</li>
+<li>원시 값에는 프로퍼티가 없지만 추가하려 해도 에러가 생기지 않음 - 하지만 접근하려 하면 undefined 반환</li>
+<li>참조 값을 변수에서 다른 변수로 복사하면 힙에 저장된 객체를 가리키는 포인터가 복사됨</li>
+</ul>
+
+<h5 id="toc_42">매개변수 전달</h5>
+
+<ul>
+<li>ECMAScript의 함수 매개변수는 모두 값으로 전달됨</li>
+<li>개발자들이 착각하는 점 : 함수 안에서 객체를 조작했을 때 외부에도 반영됨을 보고 매개변수가 참조 형태로 전달되었다고 오해, 하지만 함수 매개변수는 모두 &#39;값으로&#39; 전달됨</li>
+<li>함수 매개변수는 지역 변수와 다를 것이 없다고 생각하자</li>
+</ul>
+
+<h5 id="toc_43">타입 판별</h5>
+
+<ul>
+<li>typeof 연산자는 원시 값에 대해서는 타입을 정확히 알 수 있음</li>
+<li>객체에 대해서는 ECMAScript의 instanceof 연산자를 사용함</li>
+<li>instanceof 연산자는 변수가 주어진 참조 타입의 인스턴스일 때 true를 반환</li>
+<li><code>&#39;result&#39; = &#39;variable&#39; instanceof &#39;constructor&#39;</code>형태로 사용</li>
+</ul>
+
+<h4 id="toc_44">4.2 실행 컨텍스트와 스코프</h4>
+
+<ul>
+<li>실행 컨텍스트(Execution Context)는 &#39;컨텍스트&#39;라고 부름</li>
+<li>변수나 함수의 실행 컨텍스트는 다른 데이터에 접근할 수 있는지, 어떻게 행동하는지를 규정</li>
+<li>각 실행 컨텍스트에는 변수 객체(variable object)가 연결되어 있음</li>
+<li>변수 객체에는 해당 컨텍스트에서 정의된 모든 변수와 함수가 존재</li>
+<li>ECMAScript 프로그램의 실행
+
+<ul>
+<li>함수를 호출 -&gt; 독자적인 실행 컨택스트 생성</li>
+<li>코드 실행이 함수로 들어갈 때 -&gt; 함수의 컨텍스트가 컨텍스트 스택에 쌓임</li>
+<li>함수 실행이 끝남 -&gt; 해당 컨텍스트를 스택에서 꺼내고 컨트롤을 이전 컨텍스트에 반환</li>
+</ul></li>
+<li>스코프 체인(Scope Chain) : 컨텍스트에서 코드를 실행하면 변수 객체에 스코프 체인이 만들어짐. 실행 컨텍스트가 접근할 수 있는 모든 변수와 함수의 순서를 정의.
+
+<ul>
+<li>스코프 체인의 앞쪽은 항상 코드가 실행되는 컨텍스트의 변수 객체</li>
+<li>함수라면 활성화 객체를 변수 객체로 사용</li>
+<li>다음 순서는 해당 컨텍스트를 포함하는 부모 컨텍스트</li>
+<li>전역 컨텍스트에 도달할 때까지 순서가 이어짐</li>
+<li>전역 컨텍스트의 변수 객체는 항상 스코프 체인의 마지막</li>
+</ul></li>
+<li>외부 컨텍스트는 내부 컨텍스트에 대해 전혀 알 수 없다, 반대로 내부 컨텍스트는 스코프 체인을 통해 외부 컨텍스트 전체에 접근 가능</li>
+</ul>
+
+<h5 id="toc_45">스코프 체인 확장</h5>
+
+<ul>
+<li>try-catch 문의 catch 블록과 with문 은 모두 스코프 체인 앞에 변수 객체를 추가</li>
+</ul>
+
+<h5 id="toc_46">자바스크립트에는 블록 레벨 스코프가 없다</h5>
+<p><em class="label "><strong>다른 언어와 다른 개념</strong></em></p>
+<ul>
+<li>블록 레벨 스코프를 지원하는 언어(C언어 등)에서는 for문의 초기화 부분에서 선언한 변수가 오직 for문의 컨텍스트 안에서만 존재</li>
+<li>그러나 자바스크립트에서는 for문에서 선언한 i변수가 루프 실행이 끝난 후에도 존재
+<code>javascript
+for(var i=0; i &lt; 10; i++){
+do someting(i);
+}
+alert(i); // 10
+</code></li>
+<li>함수 내 var 키워드를 생략하면 함수를 호출한 다음부터는 그 변수에 접근 가능(전역변수로 쓰임)</li>
+<li>컨텍스트 안에서 식별자를 참조하려면 검색이 필요
+
+<ul>
+<li>식별자는 먼저 로컬 컨텍스트에서 검색되고 찾지 못하면 상위 컨텍스트로 스코프 체인을 따라 이동하며 검색</li>
+<li>전역 컨텍스트의 변수 객체에도 없는 경우 정의되지 않은 것으로 판단</li>
+</ul></li>
+<li>식별자가 로컬컨텍스트에 정의되어 있으면 부모 컨텍스트에 같은 이름의 식별자가 있다 해도 참조할 수 없음</li>
+</ul>
+
+<h4 id="toc_47">4.3 가비지 콜렉션</h4>
+
+<ul>
+<li>자바스크립트는 실행 환경에서 코드 실행 중에 메모리를 관리 - 가비지 콜렉션 언어</li>
+<li>자바스크립트는 필요한 메모리를 자동으로 할당하고 더 이상 사용하지 않는 메모리는 자동으로 회수</li>
+<li>더 이상 사용하지 않는 변수를 식별하는 기준은 브라우저마다 다름</li>
+<li><em class="label "><strong>표시하고 지우기</strong></em>  또는 <em class="label "><strong>참조 카운팅 방법</strong></em> 을 사용</li>
+<li>표시하고 지우기 방법을 대부분의 브라우저에서 사용</li>
+<li>참조 카운팅 방법은 즉시 순환 참조 문제 발생 - 문제를 피하려면 사용 후 null할당을 이용해 연결 제거 필요
+
+<ul>
+<li>연결 제거 후에는 다음 가비지 컬렉터가 실행될 때 삭제되며 메모리도 반환됨</li>
+</ul></li>
+<li>일반적으로는 개발자가 메모리 관리를 신경쓰지 않아도 됨</li>
+<li>하지만 웹브라우저에서 사용할 수 있는 메모리는 일반적인 데스크톱 앱의 가용 메모리에 비해 매우 작음</li>
+<li>수동으로 <em class="label "><strong>전역 변수 및 전역 객체의 프로퍼티</strong></em> 등을 참조 제거해주면 메모리 관리 가능 - 페이지 성능 증가 가능</li>
+<li>변수에서 참조를 제거하면 다음에 가비지 콜렉션 실행 시 해당 메모리가 회수됨</li>
+</ul>
+
+                        </div>
+
+                        <hr />
+                        
+                                            
+                        <div class="meta clearfix">
+                            
+
+                            
+                            <div class="pull-left prev-next">
+                                <a href="/post/javascript-study2-day-basic-language" class="button prev"><i class="icon"></i> 자바스크립트 제대로 배우기 - 3.언어의 기초</a>
+                            </div>
+                            
+                        </div>
+                    
+
+                        
+    <div class="row-fluid">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'luispark'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    </div>
+    <!--<div class="row">-->
+        <!--<div class="offset3 span9">-->
+            <!--<strong>tags</strong> :-->
+            <!---->
+            <!--<a href="/tag/javascript">javascript</a>&nbsp;-->
+            <!---->
+        <!--</div>-->
+    <!--</div>-->
+</div><!-- /container -->
+
+
+        <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span9 offset3">
+                    <div class="well">
+                        <p class="pull-right"><a href="#" class="backtotop">Back to top</a></p>
+                            <strong>haroopress</strong> developed by <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a>,<a href="http://twitter.com/haroopress" target="_blank">@haroopress</a> and source in <a href="https://github.com/rhiokim/haroopress" target="_blank">github</a><br/>
+                            Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.<br />
+                            Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+</body>
+</html>
