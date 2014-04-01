@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Luis' Webscience]]></title><description><![CDATA[Web, JavaScript에 관한 이야기]]></description><link>http://github.com/dylan/node-rss</link><image><url>/public/img/favorite.png</url><title>Luis&apos; Webscience</title><link></link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 01 Apr 2014 09:53:56 GMT</lastBuildDate><atom:link href="/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[자바스크립트 제대로 배우기 - 4.변수와 스코프, 메모리]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/4400fbdafe7989d1e078275ef66f27f2?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_48">자바스크립트 제대로 배우기3</h1>
-<p><em class="label "><strong>이 포스팅은 페이스북 자바스크립트 제대로 배우기 그룹의 공부 내용을 요약한 것입니다.</strong></em></p>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Luis' Webscience]]></title><description><![CDATA[Web, JavaScript에 관한 이야기]]></description><link>http://github.com/dylan/node-rss</link><image><url>/public/img/favorite.png</url><title>Luis&apos; Webscience</title><link></link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 01 Apr 2014 10:20:02 GMT</lastBuildDate><atom:link href="/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[자바스크립트 제대로 배우기 - 4.변수와 스코프, 메모리]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/4400fbdafe7989d1e078275ef66f27f2?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_48">자바스크립트 제대로 배우기3</h1>
+<p><em class="label "><strong>이 포스팅은 페이스북 자바스크립트 제대로 배우기 그룹의 공부 내용을 요약한 것입니다.</strong></em><br>
+출처 : &lt;&lt;프론트엔드 개발자를 위한 자바스크립트&gt;&gt;(2013 인사이트, 한선용 옮김)</p>
 <h2 id="toc_49">4장 변수와 스코프, 메모리</h2>
 
 <ul>
@@ -23,13 +24,15 @@
 <li>참조 값을 변수에서 다른 변수로 복사하면 힙에 저장된 객체를 가리키는 포인터가 복사됨</li>
 </ul>
 ]]></description><link>/post/javascript-study3-variable-and-scope-memory</link><guid isPermaLink="false">javascript-study3-variable-and-scope-memory</guid><dc:creator><![CDATA[<a href="luispigu" target="_blank">Luis Park</a>]]></dc:creator><pubDate>Tue, 01 Apr 2014 06:21:00 GMT</pubDate></item><item><title><![CDATA[자바스크립트 제대로 배우기 - 3.언어의 기초]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/4400fbdafe7989d1e078275ef66f27f2?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_36">자바스크립트 제대로 배우기2</h1>
-<p><em class="label "><strong>이 포스팅은 페이스북 자바스크립트 제대로 배우기 그룹의 공부 내용을 요약한 것입니다.</strong></em></p>
+<p><em class="label "><strong>이 포스팅은 페이스북 자바스크립트 제대로 배우기 그룹의 공부 내용을 요약한 것입니다.</strong></em><br>
+출처 : &lt;&lt;프론트엔드 개발자를 위한 자바스크립트&gt;&gt;(2013 인사이트, 한선용 옮김)</p>
 <h2 id="toc_37">3장 언어의 기초</h2>
 <p><em>이 장을 읽기 전엔 주 내용인 문법이나 데이터 타입, 제어문 등이</em><br>
 <em>어차피 이전에 다른 언어 공부한 경험이 있기 때문에 쉬울 거라 생각했다.</em><br>
 <em>하지만 자바스크립트 만의 특징이랄까 정말 다른 부분이 많아서 생각보다 읽는데 너무 오래걸렸다.</em><br>
 <em>그래서 기존 언어와 좀 다르고 많이 헷갈리는 부분 위주로 정리를 했다.</em>  </p><p><strong>아래 내용은 ECMAScript 3판에서 정의된 내용을 바탕으로 함.</strong></p>]]></description><link>/post/javascript-study2-day-basic-language</link><guid isPermaLink="false">javascript-study2-day-basic-language</guid><dc:creator><![CDATA[<a href="luispigu" target="_blank">Luis Park</a>]]></dc:creator><pubDate>Thu, 27 Mar 2014 15:41:00 GMT</pubDate></item><item><title><![CDATA[자바스크립트 제대로 배우기 - 1. 자바스크립트란 무엇인가, 2. HTML 속의 자바스크립트]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/4400fbdafe7989d1e078275ef66f27f2?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_19">자바스크립트 제대로 배우기 1일차</h1>
-<p><em class="label "><strong>이 포스팅은 페이스북 자바스크립트 제대로 배우기 그룹의 공부 내용을 요약한 것입니다.</strong></em></p>
+<p><em class="label "><strong>이 포스팅은 페이스북 자바스크립트 제대로 배우기 그룹의 공부 내용을 요약한 것입니다.</strong></em><br>
+출처 : &lt;&lt;프론트엔드 개발자를 위한 자바스크립트&gt;&gt;(2013 인사이트, 한선용 옮김)</p>
 <h2 id="toc_20">1장 자바스크립트란 무엇인가?</h2>
 
 <h5 id="toc_21">자바스크립트의 간단한 역사</h5>
