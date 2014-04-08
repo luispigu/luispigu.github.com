@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Luis' Webscience]]></title><description><![CDATA[Web, JavaScript에 관한 이야기]]></description><link>http://github.com/dylan/node-rss</link><image><url>/public/img/favorite.png</url><title>Luis&apos; Webscience</title><link></link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 01 Apr 2014 10:20:02 GMT</lastBuildDate><atom:link href="/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[자바스크립트 제대로 배우기 - 4.변수와 스코프, 메모리]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/4400fbdafe7989d1e078275ef66f27f2?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_48">자바스크립트 제대로 배우기3</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Luis' Webscience]]></title><description><![CDATA[Web, JavaScript에 관한 이야기]]></description><link>http://github.com/dylan/node-rss</link><image><url>/public/img/favorite.png</url><title>Luis&apos; Webscience</title><link></link></image><generator>RSS for Node</generator><lastBuildDate>Tue, 08 Apr 2014 07:07:10 GMT</lastBuildDate><atom:link href="/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[자바스크립트 제대로 배우기4 - 객체에 대한 이해]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/4400fbdafe7989d1e078275ef66f27f2?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_60">자바스크립트 제대로 배우기4 - 객체에 대한 이해</h1>
+<p><em class="label "><strong>이 포스팅은 페이스북 자바스크립트 제대로 배우기 그룹의 공부 내용을 요약한 것입니다.</strong></em><br>
+출처 : &lt;&lt;프론트엔드 개발자를 위한 자바스크립트&gt;&gt;(2013 인사이트, 한선용 옮김)</p>
+<h2 id="toc_61">6.1 객체에 대한 이해</h2>
+
+<ul>
+<li>ECMAScript 에는 클래스 라는 개념이 없으며, EMCAScript 의 객체는 다른 클래스 기반 언어와 다름</li>
+<li>객체 : 프로퍼티의 순서 없는 컬렉션이며 각 프로퍼티는 원시 값이나 객체, 함수를 포함</li>
+</ul>
+
+<h5 id="toc_62">객체 생성 :객체를 만드는 방법은 두가지가 있음</h5>
+
+<ol>
+<li>Object의 인스턴스를 만들고 프로퍼티와 메서드를 추가</li>
+<li>객체 리터럴 패턴 사용</li>
+</ol>
+<p>현재는 아래와 같은 객체 리터럴 패턴이 많이 사용됨</p><pre><code class="javascript"><span class="keyword">var</span> student = {
+    name : Luis,
+    age : <span class="number">28</span>,
+    id : <span class="number">12345678</span>,
+    sayName: <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+        alert(<span class="keyword">this</span>.name);
+    }
+};
+</code></pre>]]></description><link>/post/javascript-study4-understanding-oop</link><guid isPermaLink="false">javascript-study4-understanding-oop</guid><dc:creator><![CDATA[<a href="luispigu" target="_blank">Luis Park</a>]]></dc:creator><pubDate>Tue, 08 Apr 2014 05:39:00 GMT</pubDate></item><item><title><![CDATA[자바스크립트 제대로 배우기 - 4.변수와 스코프, 메모리]]></title><description><![CDATA[<img src="http://www.gravatar.com/avatar/4400fbdafe7989d1e078275ef66f27f2?r=pg&s=48.jpg&d=identicon"><br/><h1 id="toc_48">자바스크립트 제대로 배우기3 - 변수와 스코프, 메모리</h1>
 <p><em class="label "><strong>이 포스팅은 페이스북 자바스크립트 제대로 배우기 그룹의 공부 내용을 요약한 것입니다.</strong></em><br>
 출처 : &lt;&lt;프론트엔드 개발자를 위한 자바스크립트&gt;&gt;(2013 인사이트, 한선용 옮김)</p>
 <h2 id="toc_49">4장 변수와 스코프, 메모리</h2>

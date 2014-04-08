@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>자바스크립트 제대로 배우기 - 4.변수와 스코프, 메모리 |  Luis' Webscience</title>
+    <title>자바스크립트 제대로 배우기4 - 객체에 대한 이해 |  Luis' Webscience</title>
     <meta name="description" content="Web, JavaScript에 관한 이야기">
     <meta name="author" content="Luis Park">
     <meta name="keywords" content="" />
@@ -138,9 +138,9 @@
                         <div class="page-header">
                             <p class="meta">
                                 Javascript <!-- 임시 카테고리 -->
-                                <span class="time">Tuesday, April 1 2014 3:21 PM</span>
+                                <span class="time">Tuesday, April 8 2014 2:39 PM</span>
                             </p>
-                            <h1>자바스크립트 제대로 배우기 - 4.변수와 스코프, 메모리</h1>
+                            <h1>자바스크립트 제대로 배우기4 - 객체에 대한 이해</h1>
                         </div>
 
                         <div class="pull-right social-area">
@@ -151,119 +151,98 @@
                         </div>
 
                         <div class="markdown-wrapper">
-                            <h1 id="toc_38">자바스크립트 제대로 배우기3 - 변수와 스코프, 메모리</h1>
+                            <h1 id="toc_52">자바스크립트 제대로 배우기4 - 객체에 대한 이해</h1>
 <p><em class="label "><strong>이 포스팅은 페이스북 자바스크립트 제대로 배우기 그룹의 공부 내용을 요약한 것입니다.</strong></em><br>
 출처 : &lt;&lt;프론트엔드 개발자를 위한 자바스크립트&gt;&gt;(2013 인사이트, 한선용 옮김)</p>
-<h2 id="toc_39">4장 변수와 스코프, 메모리</h2>
+<h2 id="toc_53">6.1 객체에 대한 이해</h2>
 
 <ul>
-<li>자바스크립트 변수는 느슨한 타입을 취함 - 특정 시간에서 변수는 특정 값을 가리키는 이름일 뿐임</li>
+<li>ECMAScript 에는 클래스 라는 개념이 없으며, EMCAScript 의 객체는 다른 클래스 기반 언어와 다름</li>
+<li>객체 : 프로퍼티의 순서 없는 컬렉션이며 각 프로퍼티는 원시 값이나 객체, 함수를 포함</li>
 </ul>
 
-<h4 id="toc_40">4.1 원시 값과 참조 값</h4>
+<h5 id="toc_54">객체 생성 :객체를 만드는 방법은 두가지가 있음</h5>
 
-<ul>
-<li>ECMAScript의 변수는 원시 값과 참조 값 두가지 타입의 데이터를 저장가능</li>
-<li>원시 값 - 단순한 데이터로 Undefined,Null,불리언,숫자,문자열</li>
-<li>참조 값 - 여러 값으로 구성되는 객체</li>
-</ul>
-
-<h5 id="toc_41">원시 값과 참조 값의 차이</h5>
-
-<ul>
-<li>참조 값을 다룰 때는 언제든 프로퍼티와 메서드를 추가하거나 바꾸고 삭제 가능</li>
-<li>원시 값에는 프로퍼티가 없지만 추가하려 해도 에러가 생기지 않음 - 하지만 접근하려 하면 undefined 반환</li>
-<li>참조 값을 변수에서 다른 변수로 복사하면 힙에 저장된 객체를 가리키는 포인터가 복사됨</li>
-</ul>
-
-<h5 id="toc_42">매개변수 전달</h5>
-
-<ul>
-<li>ECMAScript의 함수 매개변수는 모두 값으로 전달됨</li>
-<li>개발자들이 착각하는 점 : 함수 안에서 객체를 조작했을 때 외부에도 반영됨을 보고 매개변수가 참조 형태로 전달되었다고 오해, 하지만 함수 매개변수는 모두 &#39;값으로&#39; 전달됨</li>
-<li>함수 매개변수는 지역 변수와 다를 것이 없다고 생각하자</li>
-</ul>
-
-<h5 id="toc_43">타입 판별</h5>
-
-<ul>
-<li>typeof 연산자는 원시 값에 대해서는 타입을 정확히 알 수 있음</li>
-<li>객체에 대해서는 ECMAScript의 instanceof 연산자를 사용함</li>
-<li>instanceof 연산자는 변수가 주어진 참조 타입의 인스턴스일 때 true를 반환</li>
-<li><code>&#39;result&#39; = &#39;variable&#39; instanceof &#39;constructor&#39;</code>형태로 사용</li>
-</ul>
-
-<h4 id="toc_44">4.2 실행 컨텍스트와 스코프</h4>
-
-<ul>
-<li>실행 컨텍스트(Execution Context)는 &#39;컨텍스트&#39;라고 부름</li>
-<li>변수나 함수의 실행 컨텍스트는 다른 데이터에 접근할 수 있는지, 어떻게 행동하는지를 규정</li>
-<li>각 실행 컨텍스트에는 변수 객체(variable object)가 연결되어 있음</li>
-<li>변수 객체에는 해당 컨텍스트에서 정의된 모든 변수와 함수가 존재</li>
-<li>ECMAScript 프로그램의 실행
-
-<ul>
-<li>함수를 호출 -&gt; 독자적인 실행 컨택스트 생성</li>
-<li>코드 실행이 함수로 들어갈 때 -&gt; 함수의 컨텍스트가 컨텍스트 스택에 쌓임</li>
-<li>함수 실행이 끝남 -&gt; 해당 컨텍스트를 스택에서 꺼내고 컨트롤을 이전 컨텍스트에 반환</li>
-</ul></li>
-<li>스코프 체인(Scope Chain) : 컨텍스트에서 코드를 실행하면 변수 객체에 스코프 체인이 만들어짐. 실행 컨텍스트가 접근할 수 있는 모든 변수와 함수의 순서를 정의.
-
-<ul>
-<li>스코프 체인의 앞쪽은 항상 코드가 실행되는 컨텍스트의 변수 객체</li>
-<li>함수라면 활성화 객체를 변수 객체로 사용</li>
-<li>다음 순서는 해당 컨텍스트를 포함하는 부모 컨텍스트</li>
-<li>전역 컨텍스트에 도달할 때까지 순서가 이어짐</li>
-<li>전역 컨텍스트의 변수 객체는 항상 스코프 체인의 마지막</li>
-</ul></li>
-<li>외부 컨텍스트는 내부 컨텍스트에 대해 전혀 알 수 없다, 반대로 내부 컨텍스트는 스코프 체인을 통해 외부 컨텍스트 전체에 접근 가능</li>
-</ul>
-
-<h5 id="toc_45">스코프 체인 확장</h5>
-
-<ul>
-<li>try-catch 문의 catch 블록과 with문 은 모두 스코프 체인 앞에 변수 객체를 추가</li>
-</ul>
-
-<h5 id="toc_46">자바스크립트에는 블록 레벨 스코프가 없다</h5>
-<p><em class="label "><strong>다른 언어와 다른 개념</strong></em></p>
-<ul>
-<li>블록 레벨 스코프를 지원하는 언어(C언어 등)에서는 for문의 초기화 부분에서 선언한 변수가 오직 for문의 컨텍스트 안에서만 존재</li>
-<li>그러나 자바스크립트에서는 for문에서 선언한 i변수가 루프 실행이 끝난 후에도 존재</li>
-</ul>
-<pre><code class="javascript"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i &lt; <span class="number">10</span>; i++){
-    <span class="keyword">do</span> someting(i);
-}
-alert(i); <span class="comment">// 10</span>
+<ol>
+<li>Object의 인스턴스를 만들고 프로퍼티와 메서드를 추가</li>
+<li>객체 리터럴 패턴 사용</li>
+</ol>
+<p>현재는 아래와 같은 객체 리터럴 패턴이 많이 사용됨</p><pre><code class="javascript"><span class="keyword">var</span> student = {
+    name : Luis,
+    age : <span class="number">28</span>,
+    id : <span class="number">12345678</span>,
+    sayName: <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
+        alert(<span class="keyword">this</span>.name);
+    }
+};
 </code></pre>
-<ul>
-<li>함수 내 var 키워드를 생략하면 함수를 호출한 다음부터는 그 변수에 접근 가능(전역변수로 쓰임)</li>
-<li>컨텍스트 안에서 식별자를 참조하려면 검색이 필요
+<h5 id="toc_55">프로퍼티 타입</h5>
 
 <ul>
-<li>식별자는 먼저 로컬 컨텍스트에서 검색되고 찾지 못하면 상위 컨텍스트로 스코프 체인을 따라 이동하며 검색</li>
-<li>전역 컨텍스트의 변수 객체에도 없는 경우 정의되지 않은 것으로 판단</li>
-</ul></li>
-<li>식별자가 로컬컨텍스트에 정의되어 있으면 부모 컨텍스트에 같은 이름의 식별자가 있다 해도 참조할 수 없음</li>
+<li>프로퍼티에는 데이터 프로퍼티, 접근자(accessor) 프로퍼티 두가지 타입이 존재</li>
+<li>ECMAScript 5판 명세에 정의된 바에 따르면, 이들 속성은 자바스크립트에서 직접적으로 접근할 수 없음</li>
 </ul>
 
-<h4 id="toc_47">4.3 가비지 콜렉션</h4>
+<h6 id="toc_56">데이터 프로퍼티</h6>
 
 <ul>
-<li>자바스크립트는 실행 환경에서 코드 실행 중에 메모리를 관리 - 가비지 콜렉션 언어</li>
-<li>자바스크립트는 필요한 메모리를 자동으로 할당하고 더 이상 사용하지 않는 메모리는 자동으로 회수</li>
-<li>더 이상 사용하지 않는 변수를 식별하는 기준은 브라우저마다 다름</li>
-<li><em class="label "><strong>표시하고 지우기</strong></em>  또는 <em class="label "><strong>참조 카운팅 방법</strong></em> 을 사용</li>
-<li>표시하고 지우기 방법을 대부분의 브라우저에서 사용</li>
-<li>참조 카운팅 방법은 즉시 순환 참조 문제 발생 - 문제를 피하려면 사용 후 null할당을 이용해 연결 제거 필요
-
+<li>데이터 값에 대한 단 하나의 위치를 포함하여 그 값을 읽고 씀</li>
+<li><p>4가지 속성 존재</p>
 <ul>
-<li>연결 제거 후에는 다음 가비지 컬렉터가 실행될 때 삭제되며 메모리도 반환됨</li>
+<li>[[Configurable]] : 해당 프로퍼티가 삭제, 변경, 변환 가능함을 의미. 기본값 true</li>
+<li>[[Enumarable]] : for-in 루프에서 해당 프로퍼티를 반환. 나열 할 수 있음을 의미. 기본값 true</li>
+<li>[[Writable]] : 프로퍼티의 값을 바꿀 수 있음. 기본값 true</li>
+<li>[[Value]] : 프로퍼티의 실제 데이터 값. 기본값 undefined</li>
 </ul></li>
-<li>일반적으로는 개발자가 메모리 관리를 신경쓰지 않아도 됨</li>
-<li>하지만 웹브라우저에서 사용할 수 있는 메모리는 일반적인 데스크톱 앱의 가용 메모리에 비해 매우 작음</li>
-<li>수동으로 <em class="label "><strong>전역 변수 및 전역 객체의 프로퍼티</strong></em> 등을 참조 제거해주면 메모리 관리 가능 - 페이지 성능 증가 가능</li>
-<li>변수에서 참조를 제거하면 다음에 가비지 콜렉션 실행 시 해당 메모리가 회수됨</li>
+<li><p>기본 프로퍼티의 속성을 바꾸려면 ECMAScript 5판의 <code>Object.defineProperty();</code> 메서드를 사용</p>
+<ul>
+<li>프로퍼티를 추가하거나 수정할 객체, 프로퍼티 이름, 서술자(descriptor) 객체를 매개변수로 받음</li>
+<li>이들 값의 일부 또는 전부를 바꿔서 대응하는 속성 값 변경 가능</li>
+<li>예를 들어, <code>writable : false</code> 로 바꾸는 경우 읽기전용 프로퍼티를 의미</li>
+<li><code>configurable</code>을 false로 설정하면 해당 프로퍼티를 객체에서 제거할 수 없음</li>
+<li>[[configurable]]을 false로 설정하면 다시는 수정할 수 없게 됨</li>
+<li><code>Object.defineProperty()</code> 호출 시 각 데이터 프로퍼티의 값을 따로 명시하지 않는다면 기본 값은 false</li>
+<li>주의 : IE8 에서는 <code>Object.defineProperty()</code>가 제대로 구현되지 않았으므로 사용 자제</li>
+</ul></li>
+</ul>
+
+<h6 id="toc_57">접근자 프로퍼티</h6>
+
+<ul>
+<li>접근자 프로퍼티는 값이 들어있지 않고 대신 두가지 함수가 포함 (getter, setter)</li>
+<li>4가지 속성 존재
+
+<ul>
+<li>[[Configurable]] : 해당 프로퍼티가 삭제, 변경, 변환 가능함을 의미. 기본값 true</li>
+<li>[[Enumarable]] : for-in 루프에서 해당 프로퍼티를 반환. 나열 할 수 있음을 의미. 기본값 true</li>
+<li>[[Get]] : 프로퍼티를 읽을 때 호출하는 함수. 기본값 undefined</li>
+<li>[[Set]] : 프로퍼티를 바꿀 때 호출하는 함수. 기본값 undefined</li>
+</ul></li>
+<li>접근자 프로퍼티의 속성을 바꾸려면 <code>Object.defineProperty()</code>메서드를 사용
+
+<ul>
+<li>접근자 프로퍼티는 일반적으로, 프로퍼티의 값을 바꿨을 때 해당 프로퍼티만 바뀌는 게 아니라 부수적인 절차가 필요한 경우 사용</li>
+<li>_ 가 붙은 프로퍼티는 객체의 메서드를 통해서만 접근할 것이고 객체 외부에서는 접근하지 않겠다는 의도를 나타낼 때 쓰는 표기법</li>
+<li>ECMAScript 5판 이전에는 두 가지 비표준 메서드 <code>__defineGetter__()</code>와 <code>__defineSetter__()</code> 를 이용해 접근자 프로퍼티를 생성</li>
+<li><code>Object.defineProperty()</code>를 지원하지 않는 브라우저에서 [[Configurable]]과 [[Enumarable]]을 수정할 수 있는 방법은 없음</li>
+</ul></li>
+</ul>
+
+<h6 id="toc_58">다중 프로퍼티 정의</h6>
+
+<ul>
+<li>여러 개의 프로퍼티를 동시에 수정해야 할 때는 <code>Object.defineProperties()</code> 메서드를 사용</li>
+<li>앞에서 사용한 <code>Object.defineProperty()</code>와의 차이점은 여러 프로퍼티를 동시에 생성했다는 것 뿐임</li>
+</ul>
+
+<h6 id="toc_59">프로퍼티 속성 읽기</h6>
+
+<ul>
+<li>ECMAScript 5의 <code>Object.getOwnPropertyDescriptor()</code> 메서드를 이용해 원하는 프로퍼티의 서술자 프로퍼티를 읽을 수 있음</li>
+<li><code>Object.getOwnPropertyDescriptor(읽을 프로퍼티가 있는 객체, 서술자를 가져올 프로퍼티)</code> 형태로 사용</li>
+<li>반환값은 접근자 프로퍼티는 configurable, enumerable, get, set 을 프로퍼티로 포함하는 객체를 반환</li>
+<li>데이터 프로퍼티는 configurable, enumerable, writable, value 를 프로퍼티로 포함하는 객체를 반환</li>
+<li><code>Object.getOwnPropertyDescriptor()</code> 메서드는 자바스크립트 모든 객체에서 사용가능, DOM, BOM 객체도 해당됨</li>
 </ul>
 
                         </div>
@@ -273,14 +252,10 @@ alert(i); <span class="comment">// 10</span>
                                             
                         <div class="meta clearfix">
                             
-                            <div class="pull-right prev-next">
-                                <a href="/post/javascript-study4-understanding-oop" class="button next">자바스크립트 제대로 배우기4 - 객체에 대한 이해<i class="icon"></i></a>
-                            </div>
-                            
 
                             
                             <div class="pull-left prev-next">
-                                <a href="/post/javascript-study2-day-basic-language" class="button prev"><i class="icon"></i> 자바스크립트 제대로 배우기 - 3.언어의 기초</a>
+                                <a href="/post/javascript-study3-variable-and-scope-memory" class="button prev"><i class="icon"></i> 자바스크립트 제대로 배우기 - 4.변수와 스코프, 메모리</a>
                             </div>
                             
                         </div>
@@ -314,8 +289,6 @@ alert(i); <span class="comment">// 10</span>
     <!--<div class="row">-->
         <!--<div class="offset3 span9">-->
             <!--<strong>tags</strong> :-->
-            <!---->
-            <!--<a href="/tag/javascript">javascript</a>&nbsp;-->
             <!---->
         <!--</div>-->
     <!--</div>-->
