@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>자바스크립트 제대로 배우기4 - 객체에 대한 이해 |  Luis' Webscience</title>
+    <title>자바스크립트 제대로 배우기 - 0. 준비 |  Luis' Webscience</title>
     <meta name="description" content="Web, JavaScript에 관한 이야기">
     <meta name="author" content="Luis Park">
     <meta name="keywords" content="" />
@@ -143,9 +143,9 @@
                         <div class="page-header">
                             <p class="meta">
                                 Javascript <!-- 임시 카테고리 -->
-                                <span class="time">Tuesday, April 8 2014 2:39 PM</span>
+                                <span class="time">Saturday, March 22 2014 11:44 PM</span>
                             </p>
-                            <h1>자바스크립트 제대로 배우기4 - 객체에 대한 이해</h1>
+                            <h1>자바스크립트 제대로 배우기 - 0. 준비</h1>
                         </div>
 
                         <div class="pull-right social-area">
@@ -156,100 +156,20 @@
                         </div>
 
                         <div class="markdown-wrapper">
-                            <h1 id="toc_52">자바스크립트 제대로 배우기4 - 객체에 대한 이해</h1>
-<p><em class="label "><strong>이 포스팅은 페이스북 자바스크립트 제대로 배우기 그룹의 공부 내용을 요약한 것입니다.</strong></em><br>
-출처 : &lt;&lt;프론트엔드 개발자를 위한 자바스크립트&gt;&gt;(2013 인사이트, 한선용 옮김)</p>
-<h2 id="toc_53">6.1 객체에 대한 이해</h2>
-
+                            <p>처음 시작은 페이스북 생활코딩 그룹의 김놀부 님의 글로부터 시작되었다.</p><p><img src="./@img/codingeverybody.png" alt="생활코딩의 글" title="생활코딩">
+(<a href="https://www.facebook.com/groups/codingeverybody/permalink/733097320064140/?stream_ref=21">https://www.facebook.com/groups/codingeverybody/permalink/733097320064140/?stream_ref=21</a>)</p><p>그동안 혼자서 자바스크립트 공부를 계속 하긴 했지만, 꾸준히 계속 하지 못했었고 완전히 습득하지 못했기 때문에 스터디에 대한 필요성을 느끼고 있었다. 그래서 &quot;자바스크립트 제대로 배우기&quot; 그룹에 가입하게 되었다.</p><p>김놀부님이 처음 보고 번역하셨던 자바스크립트 제대로 배우기(원본 글 링크) 의 커리큘럼을 바탕으로 6~8주간의 개인 공부를 진행하는 것이다. 오프라인으로 모여서 같이 해나가면 더 좋겠지만, 기본적으로는 온라인으로 주어진 분량을 계속 한 후에 자신의 블로그나 위키 등의 공간에 정리를 하는 것을 스터디의 원칙으로 삼고 있다.</p><p>스터디 교재로는 2가지 교재 중 1개를 권하고 있는데</p>
 <ul>
-<li>ECMAScript 에는 클래스 라는 개념이 없으며, EMCAScript 의 객체는 다른 클래스 기반 언어와 다름</li>
-<li>객체 : 프로퍼티의 순서 없는 컬렉션이며 각 프로퍼티는 원시 값이나 객체, 함수를 포함</li>
-</ul>
-
-<h5 id="toc_54">객체 생성 :객체를 만드는 방법은 두가지가 있음</h5>
-
-<ol>
-<li>Object의 인스턴스를 만들고 프로퍼티와 메서드를 추가</li>
-<li>객체 리터럴 패턴 사용</li>
-</ol>
-<p>현재는 아래와 같은 객체 리터럴 패턴이 많이 사용됨</p><pre><code class="javascript"><span class="keyword">var</span> student = {
-    name : Luis,
-    age : <span class="number">28</span>,
-    id : <span class="number">12345678</span>,
-    sayName: <span class="function"><span class="keyword">function</span><span class="params">()</span>{</span>
-        alert(<span class="keyword">this</span>.name);
-    }
-};
-</code></pre>
-<h5 id="toc_55">프로퍼티 타입</h5>
-
+<li><p>자바스크립트 완벽 가이드 6판 (JavaScript Definitive Guide 6th edition)</p>
 <ul>
-<li>프로퍼티에는 데이터 프로퍼티, 접근자(accessor) 프로퍼티 두가지 타입이 존재</li>
-<li>ECMAScript 5판 명세에 정의된 바에 따르면, 이들 속성은 자바스크립트에서 직접적으로 접근할 수 없음</li>
-</ul>
-
-<h6 id="toc_56">데이터 프로퍼티</h6>
-
-<ul>
-<li>데이터 값에 대한 단 하나의 위치를 포함하여 그 값을 읽고 씀</li>
-<li><p>4가지 속성 존재</p>
-<ul>
-<li>[[Configurable]] : 해당 프로퍼티가 삭제, 변경, 변환 가능함을 의미. 기본값 true</li>
-<li>[[Enumarable]] : for-in 루프에서 해당 프로퍼티를 반환. 나열 할 수 있음을 의미. 기본값 true</li>
-<li>[[Writable]] : 프로퍼티의 값을 바꿀 수 있음. 기본값 true</li>
-<li>[[Value]] : 프로퍼티의 실제 데이터 값. 기본값 undefined</li>
+<li>연구실서 구매해서 1/4 정도 보다가 조금 이해가 힘들어서 그만뒀었는데.. 번역이 약간 문제가 있어서 사람들 불만이 많았는지 현재는 절판된 상태이다.</li>
+<li>김놀부님께서 인사이트 트위터 계정으로 문의하여 현재 재고로 남아있는 6판을 할인가에 구매하면 6판 새 번역본이 나오면 택배비만 받고 다시 보내준다는 답변을 받으신 것으로 안다. 관심 있으면 링크를 참고하자.</li>
 </ul></li>
-<li><p>기본 프로퍼티의 속성을 바꾸려면 ECMAScript 5판의 <code>Object.defineProperty();</code> 메서드를 사용</p>
+<li><p>프론트엔드 개발자를 위한 자바스크립트 프로그래밍(JavaScript for Web Developers, 니콜라스 자카스 저 - 링크)</p>
 <ul>
-<li>프로퍼티를 추가하거나 수정할 객체, 프로퍼티 이름, 서술자(descriptor) 객체를 매개변수로 받음</li>
-<li>이들 값의 일부 또는 전부를 바꿔서 대응하는 속성 값 변경 가능</li>
-<li>예를 들어, <code>writable : false</code> 로 바꾸는 경우 읽기전용 프로퍼티를 의미</li>
-<li><code>configurable</code>을 false로 설정하면 해당 프로퍼티를 객체에서 제거할 수 없음</li>
-<li>[[configurable]]을 false로 설정하면 다시는 수정할 수 없게 됨</li>
-<li><code>Object.defineProperty()</code> 호출 시 각 데이터 프로퍼티의 값을 따로 명시하지 않는다면 기본 값은 false</li>
-<li>주의 : IE8 에서는 <code>Object.defineProperty()</code>가 제대로 구현되지 않았으므로 사용 자제</li>
+<li>난 이 책을 선택했다. 자바스크립트 완벽 가이드도 두껍지만 이것도 만만치 않은 1000페이지가 넘는 책이다. 개인적으로 생각하기에 위 책보단 더 잘 풀어썼다고 생각해서 이책을 고르게 되었다.</li>
 </ul></li>
 </ul>
-
-<h6 id="toc_57">접근자 프로퍼티</h6>
-
-<ul>
-<li>접근자 프로퍼티는 값이 들어있지 않고 대신 두가지 함수가 포함 (getter, setter)</li>
-<li>4가지 속성 존재
-
-<ul>
-<li>[[Configurable]] : 해당 프로퍼티가 삭제, 변경, 변환 가능함을 의미. 기본값 true</li>
-<li>[[Enumarable]] : for-in 루프에서 해당 프로퍼티를 반환. 나열 할 수 있음을 의미. 기본값 true</li>
-<li>[[Get]] : 프로퍼티를 읽을 때 호출하는 함수. 기본값 undefined</li>
-<li>[[Set]] : 프로퍼티를 바꿀 때 호출하는 함수. 기본값 undefined</li>
-</ul></li>
-<li>접근자 프로퍼티의 속성을 바꾸려면 <code>Object.defineProperty()</code>메서드를 사용
-
-<ul>
-<li>접근자 프로퍼티는 일반적으로, 프로퍼티의 값을 바꿨을 때 해당 프로퍼티만 바뀌는 게 아니라 부수적인 절차가 필요한 경우 사용</li>
-<li>_ 가 붙은 프로퍼티는 객체의 메서드를 통해서만 접근할 것이고 객체 외부에서는 접근하지 않겠다는 의도를 나타낼 때 쓰는 표기법</li>
-<li>ECMAScript 5판 이전에는 두 가지 비표준 메서드 <code>__defineGetter__()</code>와 <code>__defineSetter__()</code> 를 이용해 접근자 프로퍼티를 생성</li>
-<li><code>Object.defineProperty()</code>를 지원하지 않는 브라우저에서 [[Configurable]]과 [[Enumarable]]을 수정할 수 있는 방법은 없음</li>
-</ul></li>
-</ul>
-
-<h6 id="toc_58">다중 프로퍼티 정의</h6>
-
-<ul>
-<li>여러 개의 프로퍼티를 동시에 수정해야 할 때는 <code>Object.defineProperties()</code> 메서드를 사용</li>
-<li>앞에서 사용한 <code>Object.defineProperty()</code>와의 차이점은 여러 프로퍼티를 동시에 생성했다는 것 뿐임</li>
-</ul>
-
-<h6 id="toc_59">프로퍼티 속성 읽기</h6>
-
-<ul>
-<li>ECMAScript 5의 <code>Object.getOwnPropertyDescriptor()</code> 메서드를 이용해 원하는 프로퍼티의 서술자 프로퍼티를 읽을 수 있음</li>
-<li><code>Object.getOwnPropertyDescriptor(읽을 프로퍼티가 있는 객체, 서술자를 가져올 프로퍼티)</code> 형태로 사용</li>
-<li>반환값은 접근자 프로퍼티는 configurable, enumerable, get, set 을 프로퍼티로 포함하는 객체를 반환</li>
-<li>데이터 프로퍼티는 configurable, enumerable, writable, value 를 프로퍼티로 포함하는 객체를 반환</li>
-<li><code>Object.getOwnPropertyDescriptor()</code> 메서드는 자바스크립트 모든 객체에서 사용가능, DOM, BOM 객체도 해당됨</li>
-</ul>
-
+<p>공부를 하기로 결정한 후엔 빠른 책 주문으로 벌써 책을 받았다. 하지만 여러가지 바쁜 일들이 존재해서 아직 시작하지 못했다... ㅠㅠ</p><p>이번 주말을 시작으로 해서 공부를 시작해 보기로 하고 오늘은 이만..</p>
                         </div>
 
                         <hr />
@@ -257,11 +177,11 @@
                                             
                         <div class="meta clearfix">
                             
-
-                            
-                            <div class="pull-left prev-next">
-                                <a href="/post/javascript-study3-variable-and-scope-memory" class="button prev"><i class="icon"></i> 자바스크립트 제대로 배우기 - 4.변수와 스코프, 메모리</a>
+                            <div class="pull-right prev-next">
+                                <a href="/post/javascript-study1-Introduction-and-html-javascript" class="button next">자바스크립트 제대로 배우기 - 1. 자바스크립트란 무엇인가, 2. HTML 속의 자바스크립트<i class="icon"></i></a>
                             </div>
+                            
+
                             
                         </div>
                     
