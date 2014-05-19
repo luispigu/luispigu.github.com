@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>자바스크립트 제대로 배우기 - 5.참조 타입 |  Luis' Webscience</title>
+    <meta name="description" content="Web, JavaScript에 관한 이야기">
+    <meta name="author" content="Luis Park">
+    <meta name="keywords" content="" />
+    <meta name="generator" content="haroopress v0.9.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/rss.xml" rel="alternate" title="Luis' Webscience" type="application/rss+xml">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Le styles -->
+    <link rel="canonical" href="">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
+    <link href="/css/markdown.css" rel="stylesheet">
+    <link href="/css/haroopress.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/code/default.css" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-64.png">
+
+    <!-- Le javascript -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.jsonp.js"></script>
+    <script src="/js/mustache.js"></script>
+    <script src="/js/apps/github.js"></script>
+    <script src="/js/apps/twitter.js"></script>
+</head>
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+
+    <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="social">
+                
+                <a class="rss" href="/rss.xml">RSS</a>
+            </div>
+            
+
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/archives">Archives</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <form action="/search" id="search">
+                <input type="text" value="" placeholder="Search" name="q" id="search-text" class="placeholder">
+            </form>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+    <div class="row">
+        <div class="span3 side">
+            <div id="author" class="well">
+                <h3 class="title">About Author</h3>
+                 <div class="gravatar">
+                    <img src="http://www.gravatar.com/avatar/4400fbdafe7989d1e078275ef66f27f2?r=pg&amp;s=128.jpg&amp;d=identicon" />
+                </div>
+                <ul class="profile">
+                    <li class="nickname">Luis Park</li>
+                    <li class="blog"><a href="luispigu.github.com" target="_blank">luispigu.github.com</a></li>
+                    <li class="twitter"><a href="http://twitter.com/luispigu" target="_blank">@luispigu</a></li>
+                    <li class="github"><a href="https://github.com/luispigu" target="_blank"></li>
+                </ul>
+     
+                <p>
+                    <a href="https://twitter.com/luispigu" class="twitter-follow-button" data-show-count="true">Follow @luispigu</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </p>
+                
+            </div>
+            <div class="well recent">
+    <h6 class="title">Recent Articles</h6>
+    <ul class="nav nav-list">
+    
+        <li>
+            <a href="/post/javascript-study0-Start" target="_blank">자바스크립트 제대로 배우기 - 0. 준비</a>
+
+        </li>
+    
+        <li>
+            <a href="/post/javascript-study1-Introduction-and-html-javascript" target="_blank">자바스크립트 제대로 배우기 - 1. 자바스크립트란 무엇인가, 2. HTML 속의 자바스크립트</a>
+
+        </li>
+    
+        <li>
+            <a href="/post/javascript-study2-day-basic-language" target="_blank">자바스크립트 제대로 배우기 - 3.언어의 기초</a>
+
+        </li>
+    
+        <li>
+            <a href="/post/javascript-study3-variable-and-scope-memory" target="_blank">자바스크립트 제대로 배우기 - 4.변수와 스코프, 메모리</a>
+
+        </li>
+    
+        <li>
+            <a href="/post/javascript-study4-understanding-oop" target="_blank">자바스크립트 제대로 배우기 - 6.1 객체에 대한 이해</a>
+
+        </li>
+    
+        <li>
+            <a href="/post/javascript-study5-reference-type" target="_blank">자바스크립트 제대로 배우기 - 5.참조 타입</a>
+
+        </li>
+    
+        <li>
+            <a href="/post/javascript-study6-function" target="_blank">자바스크립트 제대로 배우기 - 7. 함수 표현식</a>
+
+        </li>
+    
+    </ul>
+</div>
+            			<div class="well category">
+                <ul class="nav nav-list">
+                    <li class="nav-header title">Categories</li>
+                    <li class="active"><a href="/category">Home</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="span9 articles">
+            <div class="row">
+                <div class="span9">
+                    <div class="well">
+                        
+                        <div class="page-header">
+                            <p class="meta">
+                                Javascript <!-- 임시 카테고리 -->
+                                <span class="time">Wednesday, May 7 2014 12:02 AM</span>
+                            </p>
+                            <h1>자바스크립트 제대로 배우기 - 5.참조 타입</h1>
+                        </div>
+
+                        <div class="pull-right social-area">
+                            
+                            
+
+                            
+                        </div>
+
+                        <div class="markdown-wrapper">
+                            <h1 id="toc_63">자바스크립트 제대로 배우기5 - 5. 참조 타입</h1>
+<p><em class="label "><strong>이 포스팅은 페이스북 자바스크립트 제대로 배우기 그룹의 공부 내용을 요약한 것입니다.</strong></em><br>
+출처 : &lt;&lt;프론트엔드 개발자를 위한 자바스크립트&gt;&gt;(2013 인사이트, 한선용 옮김)</p>
+<ul>
+<li>참조 값(객체)란 특정 &#39;참조 타입&#39;의 인스턴스</li>
+<li>ECMAScript에서는 참조 타입은 데이터와 기능을 그룹으로 묶는 구조</li>
+<li>ECMAScript는 객체지향언어이긴 하지만 <code>클래스나 인터페이스 같은 구조를 갖고 있지 않음</code></li>
+<li>객체는 특정 참조 타입의 &#39;인스턴스&#39;</li>
+<li>객체 생성 방법은 new 연산자 뒤에 &#39;생성자&#39;를 씀</li>
+</ul>
+
+<h3 id="toc_64">5장 참조 타입</h3>
+
+<h4 id="toc_65">5.1 Object 타입</h4>
+
+<ul>
+<li>명시적으로 인스턴스를 생성하는 방법은 두가지</li>
+<li>new 연산자와 Object 생성자 쓰는 법 / &#39;객체 리터럴&#39; 표기법</li>
+<li>객체 리터럴 표기법은 프로퍼티를 여러 개 쓸 때 가독성을 확보하는 용도로만 쓰길 권함</li>
+<li>객체 프로퍼티에 접근 시 일반적으로는 점 표기법이 더 좋으며, 프로퍼티 이름에 변수가 필요할 때는 대괄호 표기법 사용</li>
+</ul>
+
+<h4 id="toc_66">5.2 Array 타입</h4>
+
+<ul>
+<li>ECMAScript의 배열 슬롯에는 어떤 타입의 데이터라도 넣을 수 있음</li>
+<li>배열의 크기를 동적으로 조절하므로 데이터를 추가하면 배열의 크기가 자동으로 커짐</li>
+<li>배열 생성은 Array 생성자를 쓰는 법 / &#39;배열 리터럴&#39; 표기법 두가지 방법</li>
+</ul>
+
+<h6 id="toc_67">배열 프로퍼티 중 length 프로퍼티의 재밌는 점</h6>
+
+<ul>
+<li>읽기 전용이 아니라서 값을 바꾸면 배열 길이가 그에 맞게 바뀌면서 데이터를 제거하거나 빈 슬롯 추가</li>
+<li>배열 마지막에 데이터를 추가할 때 유용하게 사용 가능
+
+<ul>
+<li><code>exArray[exArray.length] = &quot;new value&quot;;</code></li>
+</ul></li>
+</ul>
+
+<h5 id="toc_68">5.2.1 배열 감지</h5>
+
+<ul>
+<li>ECMAScript 3 때는 배열과 객체의 구분이 쉽지 않았음</li>
+<li>만약 전역 스코프가 하나뿐인 단순한 웹 페이지에서는 instanceof 연산자로 구분 가능</li>
+<li>하지만 웹 페이지에 프레임이 여러 개 있다면 전역 실행 컨텍스트가 여러 개 이므로 instanceof 로는 불가능</li>
+<li>ECMAScript 5 에서는 Array.isArray() 메서드를 제공 : 각ㅂㅅ이 배열인지 아닌지를 생성된 실행 컨텍스트와 무고간하게 알 수 있음</li>
+</ul>
+
+<h5 id="toc_69">5.2.3 스택 메서드 &amp; 5.2.4 큐 메서드</h5>
+
+<ul>
+<li>배열 객체를 스택처럼 동작하게 할 수 있음</li>
+<li><code>push(), pop()</code> 메서드를 사용</li>
+<li>배열 객체를 큐 처럼 동작하게 할 수도 있음</li>
+<li><code>push(), shift()</code> 메서드를 사용</li>
+<li><code>unshift(), pop()</code> 메서드를 이용해서 큐의 반대로 사용 가능</li>
+</ul>
+
+<h5 id="toc_70">5.2.5 정렬 메서드</h5>
+
+<ul>
+<li>sort() 메서드를 그대로 사용하는 경우 10이 5보다 앞설 수 있음</li>
+<li>&#39;비교 함수&#39; 를 넘겨서 순서를 조절 : arrayName.sort(비교함수이름);</li>
+<li>비교 함수의 역할은 앞이 뒤보다 작을 때는 음수, 같은 경우 0, 앞이 더 클 경우 양수를 반환</li>
+</ul>
+
+<h5 id="toc_71">5.2.6 조작 메서드</h5>
+
+<ul>
+<li>배열에 들어있는 데이터를 조작하는 메서드들</li>
+<li>concat(), slice(), splice() 등등</li>
+<li>splice() 는 배열 중간에 데이터를 삽입하는 것이 주 목적
+
+<ul>
+<li>삭제, 삽입, 대체 의 3가지 방법으로 사용</li>
+</ul></li>
+</ul>
+
+<h5 id="toc_72">5.2.7 위치 메서드</h5>
+
+<ul>
+<li>ECMAScript 5 에서는 indexOf(), lastIndexOf() 두 가지 위치 메서드가 추가됨</li>
+<li>첫 번째 매개변수는 검색할 데이터, 두번 째 매개변수는 옵션으로 검색을 시작할 인덱스</li>
+<li>결과값은 찾아낸 데이터의 인덱스를 반환, 데이터를 찾지 못했을 땐 -1, 검색 시 === 연산자 비교(타입까지 일치)</li>
+</ul>
+
+<h6 id="toc_73">5.3 Date 타입, 5.4 RegExp 타입 생략</h6>
+
+<h4 id="toc_74">5.5 Function 타입</h4>
+
+<ul>
+<li>함수는 <code>객체</code> - 모든 함수는 Function 타입의 인스턴스</li>
+<li>다른 참조 타입과 마찬가지로 프로퍼티와 메서드 존재</li>
+<li>함수의 정의
+
+<ul>
+<li>함수 선언 문법 사용 : 보통 다른 언어와 같은 함수 선언</li>
+<li>함수 표현식 사용 
+
+<ul>
+<li><code>var func1 = function(para1, para2){ return 1; };</code></li>
+</ul></li>
+<li>Function 생성자 사용 
+
+<ul>
+<li><code>var func2 = new Function(&quot;para1&quot;, &quot;para2&quot;, &quot;return 1&quot;) // 권장하지 않음</code></li>
+</ul></li>
+</ul></li>
+<li>함수 이름은 단순히 함수를 가리키는 포인터</li>
+<li>함수 하나에 이름을 여러 개 붙일 수 있음</li>
+</ul>
+
+<h5 id="toc_75">5.5.1 오버로딩 없음</h5>
+
+<ul>
+<li>함수 이름은 단순한 포인터이므로 함수 오버로딩은 불가능</li>
+<li>마지막에 정의한 함수가 이전에 정의한 함수를 덮어씀</li>
+</ul>
+
+<h5 id="toc_76">5.5.2 함수 선언 vs 함수 표현식</h5>
+
+<ul>
+<li>함수 선언과 함수 표현식은 &#39;거의&#39; 일치</li>
+<li>다른 점으로는 <code>함수 선언 호이스팅(hoisting : 끌어올리다)</code></li>
+<li>자바스크립트 엔진이 실행 컨텍스트에 데이터를 불러올 때 차이
+
+<ul>
+<li>함수 선언 호이스팅 : 코드를 실행하기 전에 함수 선언을 읽고 실행 컨텍스트에 추가</li>
+<li>자바스크립트 엔진은 코드를 평가할 때 제일 먼저 함수 선언을 찾은 다음 이들을 맨 위로 올린다</li>
+<li>그러므로 함수 선언이 소스코드에서 해당 함수를 실행하는 부분보다 뒤에 있어도 함수 실행 가능</li>
+</ul></li>
+<li>함수 표현식을 쓰면서도 함수 선언처럼 보이게 var sum = function sum(){}; 처럼 사용은 가능</li>
+</ul>
+
+<h5 id="toc_77">5.5.3 값처럼 쓰는 함수</h5>
+
+<ul>
+<li>ECMAScript에서 함수 이름은 단지 변수</li>
+<li>함수를 다른 함수에 매개 변수로 넘기거나, 함수가 실행 결과로 다른 함수를 반환하는 일이 가능</li>
+<li>주의 : 함수를 가리키는 포인터(함수 이름)에 접근하기만 할 때는 괄호를 쓰면 안됨</li>
+</ul>
+
+<h5 id="toc_78">5.5.4 함수의 내부 구조</h5>
+
+<ul>
+<li>함수 내부 arguments, this 라는 특별한 객체가 존재</li>
+<li>arguments
+
+<ul>
+<li>배열과 비슷한 객체, 함수에 전달된 모든 매개변수를 포함</li>
+<li>arguments 객체의 소유자인 함수를 가리키는 포인터인 callee 프로퍼티 포함</li>
+<li>arguments.callee를 사용하면 재귀 함수가 함수 이름에 의존하는 약점을 극복 가능</li>
+<li>arguments.callee를 사용한 재귀 함수는 함수에 대한 참조가 바뀌어도 정확히 동작</li>
+</ul></li>
+<li>this
+
+<ul>
+<li>C#이나 자바의 this 객체와 비슷하지만 정확히 같지는 않음</li>
+<li>this는 함수가 실행 중인 컨텍스트 객체에 대한 참조</li>
+</ul></li>
+<li>ECMAScript 5판에서는 함수 객체의 caller 프로퍼티도 공식화
+
+<ul>
+<li>3판에서 명세화 되지는 않았지만 오페라 초기 버전을 제외한 모든 브라우저에서 지원</li>
+<li>해당 함수를 호출한 함수에 대한 참조를 저장</li>
+<li>전역 스코프에서 호출 시 null이 저장</li>
+<li>현재함수이름.caller 로 사용하면 함수가 불린 상위 함수의 코드를 반환</li>
+<li>함수와 이름 사이의 의존성 제거를 위해 arguments.callee.caller 로 사용</li>
+<li>스트릭트 모드로 실행 중인 함수에서는 arguments.callee에 접근하려면 에러</li>
+</ul></li>
+</ul>
+
+<h5 id="toc_79">5.5.5 함수 프로퍼티와 메서드</h5>
+
+<ul>
+<li>모든 함수에 공통인 프로퍼티는 length와 prototype</li>
+<li>length 프로퍼티 : 함수가 넘겨받을 것으로 예상하는 이름 붙으 매개변수의 숫자</li>
+<li>prototype 프로퍼티
+
+<ul>
+<li>prototype은 모든 참조 타입의 인스턴스 메서드가 존재하는 곳</li>
+<li>toString() 이나 valueOf()같은 메서드가 존재</li>
+<li>prototype 프로퍼티는 개발자 자신만의 참조 타입과 상속을 정의할 때 중요</li>
+<li>열거할 수 없는 프로퍼티이므로 for-in 문에 나타나지 않음</li>
+</ul></li>
+<li>함수에는 추가로 apply() call() 메서드 존재
+
+<ul>
+<li>소유자인 함수를 호출하면서 this를 넘김</li>
+<li>결과적으로 함수 내부에서 this 객체의 값을 바꾸는 것이나 마찬가지</li>
+<li>둘의 차이는 매개변수를 전달 할 때, call 메서드에는 매개변수를 하나하나 전부 써줘야 함</li>
+<li>전달할 매개변수가 없다면 두 메서드는 완전히 같음</li>
+</ul></li>
+<li>apply()와 call() 메서드의 진가는 this를 바꾸는 데 있음
+
+<ul>
+<li>예) <code>sayColor.call(o)</code> 로 사용하면 sayColor 함수의 컨텍스트를 o로 설정</li>
+<li><code>객체마다 일일히 메서드를 등록하지 않아도 된다는 장점</code></li>
+</ul></li>
+<li>ECMAScript 5판에서는 bind()라는 메서드도 정의
+
+<ul>
+<li>새 함수 인스턴스를 만드는데 그 this는 bind()에 전달된 값임</li>
+<li>bind(o)와 같이 o에 this를 묶는 것</li>
+<li>22장에서 다시 확인하자!</li>
+</ul></li>
+<li>toLocalString() 과 toString()을 함수에서 호출하면 항상 함수의 코드를 반환
+
+<ul>
+<li>디버그 용도에는 유용할 수 있지만 브라우저마다 형식이 다르게 반환되므로 중요한 기능에 그대로 사용해서는 안됨</li>
+</ul></li>
+<li>valueOf()는 함수 자체를 그대로 반환</li>
+</ul>
+
+<h4 id="toc_80">5.6 원시 래퍼 타입</h4>
+
+<ul>
+<li>Boolean, Number, String 은 원시 값을 편리하게 조작하기 위해 디자인된 참조 타입</li>
+<li>원시 값을 읽을 때마다 이에 해당하는 래퍼 타입이 이면에서 생성되고 메서드를 사용할 수 있음</li>
+<li>참조 타입과 원시 래퍼 타입의 주요 차이는 생명 주기
+
+<ul>
+<li>new 연산자를 이용해 만든 참조 타입의 인스턴스는 스코프를 벗어날 때까지 메모리에 존재</li>
+<li>자동으로 생성된 원시 래퍼 타입은 코드의 해당 행을 벗어나는 즉시 파괴됨</li>
+<li>원시 래퍼 타입에는 런타임에 프로퍼티나 메서드를 추가할 수 없음</li>
+</ul></li>
+<li>Boolean, Number, String 생성자를 사용해 명시적으로 원시 래퍼 객체를 생성할 수 있음
+
+<ul>
+<li>지금 다루는 것이 원시 값인지 래퍼 객체이니지 혼란을 불러 일으킬 가능성 존재하므로 필요할 때로 한정</li>
+</ul></li>
+<li>new를 사용해 원시 래퍼 생성자를 호출한 것과, 같은 이름의 형 변환 함수를 호출한 결과는 다름
+
+<ul>
+<li>아래와 같이 함수 호출 시는 변수 타입이 그대로 new를 사용할 땐 오브젝트</li>
+<li><code>var number = Number(num); // type : &quot;number&quot;</code></li>
+<li><code>var obj = new Number(num); // type : &quot;object&quot;</code></li>
+</ul></li>
+</ul>
+
+                        </div>
+
+                        <hr />
+                        
+                                            
+                        <div class="meta clearfix">
+                            
+                            <div class="pull-right prev-next">
+                                <a href="/post/javascript-study6-function" class="button next">자바스크립트 제대로 배우기 - 7. 함수 표현식<i class="icon"></i></a>
+                            </div>
+                            
+
+                            
+                            <div class="pull-left prev-next">
+                                <a href="/post/javascript-study4-understanding-oop" class="button prev"><i class="icon"></i> 자바스크립트 제대로 배우기 - 6.1 객체에 대한 이해</a>
+                            </div>
+                            
+                        </div>
+                    
+
+                        
+    <div class="row-fluid">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'luispark'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    </div>
+    <!--<div class="row">-->
+        <!--<div class="offset3 span9">-->
+            <!--<strong>tags</strong> :-->
+            <!---->
+        <!--</div>-->
+    <!--</div>-->
+</div><!-- /container -->
+
+
+        <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span9 offset3">
+                    <div class="well">
+                        <p class="pull-right"><a href="#" class="backtotop">Back to top</a></p>
+                            <strong>haroopress</strong> developed by <a href="http://twitter.com/rhiokim" target="_blank">@rhiokim</a>,<a href="http://twitter.com/haroopress" target="_blank">@haroopress</a> and source in <a href="https://github.com/rhiokim/haroopress" target="_blank">github</a><br/>
+                            Designed and built with all the love in the world <a href="http://twitter.com/twitter" target="_blank">@twitter</a> by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.<br />
+                            Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-34861484-1']);
+            _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+
+
+</body>
+</html>
